@@ -4,23 +4,23 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>利用Hexo建设个人博客 | macwu&#39;s blog</title>
+    <title>第三章：聚类、群组 | macwu&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="macwu">
     
 
     
-    <meta name="description" content="记得小学的课程作业里，最不喜欢的的就是写日记。一是觉得每天的生活都一样，真不知道流水账有什么好记的，二是觉得写日记很烦，没什么用。现在想想，也许当时是讨厌拿起笔，毕竟我现在用键盘写着东西觉得挺舒服的。一路从学生时代走过来，到现在的研究生阶段，越走越觉得记录是个好习惯，不论是对于学习、工作还是生活，对于我这个既懒惰又有归纳癖的人来说，把一些事情，做事的过程记录下来，乃至每一个步骤，都可以让宝贵的脑容">
+    <meta name="description" content="这一章我觉得有些无聊，书里首先提出了监督型学习和无监督型学习，所谓监督型学习就是利用知道答案的样本进行训练，而聚类是一种无监督型学习，就是说，将一些样本数据进行聚合，组成群组，构成一些结构。而聚合的根据就是样本与样本之间的距离，这里回到第二章的内容；最后将聚类的结果绘制成一个树状图，或者别的图，挺无聊的。第三章的后部分又提出了一个叫k-means聚类的玩意。这个东西其实也是聚类，不过思想有所不同。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="利用Hexo建设个人博客">
-<meta property="og:url" content="http://yoursite.com/2016/02/14/利用Hexo建设个人博客/index.html">
+<meta property="og:title" content="第三章：聚类、群组">
+<meta property="og:url" content="http://yoursite.com/2016/02/23/集体智慧编程-第三章/index.html">
 <meta property="og:site_name" content="macwu's blog">
-<meta property="og:description" content="记得小学的课程作业里，最不喜欢的的就是写日记。一是觉得每天的生活都一样，真不知道流水账有什么好记的，二是觉得写日记很烦，没什么用。现在想想，也许当时是讨厌拿起笔，毕竟我现在用键盘写着东西觉得挺舒服的。一路从学生时代走过来，到现在的研究生阶段，越走越觉得记录是个好习惯，不论是对于学习、工作还是生活，对于我这个既懒惰又有归纳癖的人来说，把一些事情，做事的过程记录下来，乃至每一个步骤，都可以让宝贵的脑容">
-<meta property="og:updated_time" content="2016-02-14T12:52:38.000Z">
+<meta property="og:description" content="这一章我觉得有些无聊，书里首先提出了监督型学习和无监督型学习，所谓监督型学习就是利用知道答案的样本进行训练，而聚类是一种无监督型学习，就是说，将一些样本数据进行聚合，组成群组，构成一些结构。而聚合的根据就是样本与样本之间的距离，这里回到第二章的内容；最后将聚类的结果绘制成一个树状图，或者别的图，挺无聊的。第三章的后部分又提出了一个叫k-means聚类的玩意。这个东西其实也是聚类，不过思想有所不同。">
+<meta property="og:updated_time" content="2016-02-23T14:00:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="利用Hexo建设个人博客">
-<meta name="twitter:description" content="记得小学的课程作业里，最不喜欢的的就是写日记。一是觉得每天的生活都一样，真不知道流水账有什么好记的，二是觉得写日记很烦，没什么用。现在想想，也许当时是讨厌拿起笔，毕竟我现在用键盘写着东西觉得挺舒服的。一路从学生时代走过来，到现在的研究生阶段，越走越觉得记录是个好习惯，不论是对于学习、工作还是生活，对于我这个既懒惰又有归纳癖的人来说，把一些事情，做事的过程记录下来，乃至每一个步骤，都可以让宝贵的脑容">
+<meta name="twitter:title" content="第三章：聚类、群组">
+<meta name="twitter:description" content="这一章我觉得有些无聊，书里首先提出了监督型学习和无监督型学习，所谓监督型学习就是利用知道答案的样本进行训练，而聚类是一种无监督型学习，就是说，将一些样本数据进行聚合，组成群组，构成一些结构。而聚合的根据就是样本与样本之间的距离，这里回到第二章的内容；最后将聚类的结果绘制成一个树状图，或者别的图，挺无聊的。第三章的后部分又提出了一个叫k-means聚类的玩意。这个东西其实也是聚类，不过思想有所不同。">
 
     
     <link rel="alternative" href="/atom.xml" title="macwu&#39;s blog" type="application/atom+xml">
@@ -82,14 +82,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/02/14/利用Hexo建设个人博客/" title="利用Hexo建设个人博客" itemprop="url">利用Hexo建设个人博客</a>
+      <a href="/2016/02/23/集体智慧编程-第三章/" title="第三章：聚类、群组" itemprop="url">第三章：聚类、群组</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="macwu" target="_blank" itemprop="author">macwu</a>
 		
   <p class="article-time">
-    <time datetime="2016-02-14T07:51:00.000Z" itemprop="datePublished"> 發表於 2016-02-14</time>
+    <time datetime="2016-02-23T13:29:36.000Z" itemprop="datePublished"> 發表於 2016-02-23</time>
     
   </p>
 </header>
@@ -98,39 +98,16 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目錄</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo_on_Git"><span class="toc-number">1.</span> <span class="toc-text">Hexo on Git  </span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo_u7684_u5B89_u88C5"><span class="toc-number">2.</span> <span class="toc-text">Hexo的安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo_u7684_u90E8_u7F72"><span class="toc-number">3.</span> <span class="toc-text">Hexo的部署</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo_u4E3B_u9898_u7684_u5B89_u88C5_u53CA_u4E2A_u6027_u5316"><span class="toc-number">4.</span> <span class="toc-text">Hexo主题的安装及个性化</span></a></li></ol>
+			
 		
 		</div>
 		
-		<p>　　记得小学的课程作业里，最不喜欢的的就是写日记。一是觉得每天的生活都一样，真不知道流水账有什么好记的，二是觉得写日记很烦，没什么用。现在想想，也许当时是讨厌拿起笔，毕竟我现在用键盘写着东西觉得挺舒服的。一路从学生时代走过来，到现在的研究生阶段，越走越觉得记录是个好习惯，不论是对于学习、工作还是生活，对于我这个既懒惰又有归纳癖的人来说，把一些事情，做事的过程记录下来，乃至每一个步骤，都可以让宝贵的脑容量轻松一些。（也许是缘于小时候百看不厌的鲁滨逊漂流记）😀<br>　　那么就从搭建我自己的博客开始吧。。。  </p>
-<h2 id="Hexo_on_Git"><a href="#Hexo_on_Git" class="headerlink" title="Hexo on Git"></a>Hexo on Git  </h2><p>　　Hexo是一款轻量级的博客生成系统（我自己的概念），既可以在本地预览效果，也可以部署到Github这种真人在线同性交友平台上，无异于一个小型的网站日记本，啥都能记，还能定制，想想都有点小激动呢。  </p>
-<p>  官方网站：<a href="https://hexo.io/docs/" target="_blank" rel="external">hexo</a>  </p>
-<p>　　那么搭建博客的主要材料就是Hexo 加上 Github了。<br>（使用Gitcafe也可，但亲测Github较为稳定，并能广交全世界同性好友，赶紧去注册吧～）  </p>
-<p><a href="https://github.com" target="_blank" rel="external">Github</a>  </p>
-<p><a href="http://gitcafe.com" target="_blank" rel="external">Gitcafe</a><br>　　git的安装祥见github的官网吧。</p>
-<h2 id="Hexo_u7684_u5B89_u88C5"><a href="#Hexo_u7684_u5B89_u88C5" class="headerlink" title="Hexo的安装"></a>Hexo的安装</h2><p>　　1.<code>npm install hexo-cli -g //使用npm安裝hexo客戶端</code></p>
-<p>　　2.<code>hexo init blog //使用“blog“文件初始化</code>  </p>
-<p>　　3.<code>cd blog//</code>  </p>
-<p>　　4.<code>npm install</code>  </p>
-<p>　　5.<code>hexo server //启动本地hexo服务</code><br>　　短短五行代码就能搞定hexo的安装，前提是npm这个linux必备的工具要安装好。<a href="https://www.npmjs.com" target="_blank" rel="external">npm</a>(linux 下的工具多得很，可玩行也很高，目前正在看《鸟哥的linux私房菜》读书笔记也过段时间就放出吧！)  </p>
-<h2 id="Hexo_u7684_u90E8_u7F72"><a href="#Hexo_u7684_u90E8_u7F72" class="headerlink" title="Hexo的部署"></a>Hexo的部署</h2><p>　　在Hexo安装之后，首先执行执行<code>hexo g</code>即generate，生成博客页面文件。这时只要执行<code>hexo s</code>就可以启动hexo的本地服务器<a href="http://0.0.0.0:4000" target="_blank" rel="external">http://0.0.0.0:4000</a>，就可以访问到自己的本地博客页面，注意，这里是本地服务，也就是外网是访问不到的。想要外网访问，还要进行进一步的设置，就可以将hexo部署在Github上。<br>　　1.<code>若无Github帐号，则先注册Github帐号，username作为示例帐号。</code></p>
-<p>　　2.<code>建立一个新的repo，命名为username.github.io，这里repo名字为必须的格式，不然无法进行正常访问。</code>  </p>
-<p>　　3.<code>在hexo文件夹内找到_config.xml，打开之后查找Deployment，在git下：</code><br>　　<font color="red" size="4">这一步非常重要，需要注意的是Github的地址，以及Git的设定</font><br>　　<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:  </span><br><span class="line">　type: git  </span><br><span class="line">　　repo:   </span><br><span class="line">　　github: https://github.com/username/username.github.io.git,master  </span><br><span class="line">　　gticafe: https://gitcafe.com/username/username.git,master</span><br></pre></td></tr></table></figure></p>
-<p>　　4.<code>cd hexo，进入本地hexo文件夹，执行</code>  </p>
-<p>　　5.<code>hexo server //启动本地hexo服务</code><br>　　此时访问<a href="http://username.github.io" target="_blank" rel="external">http://username.github.io</a>即可。<br>　　如能正确访问到博客，hexo的安装与部署已完成，如不能则仔细检查上述步骤。至于主题的更改以及后期的美化待更。  </p>
-<blockquote>
-<p>更于。。。  </p>
-</blockquote>
-<h2 id="Hexo_u4E3B_u9898_u7684_u5B89_u88C5_u53CA_u4E2A_u6027_u5316"><a href="#Hexo_u4E3B_u9898_u7684_u5B89_u88C5_u53CA_u4E2A_u6027_u5316" class="headerlink" title="Hexo主题的安装及个性化"></a>Hexo主题的安装及个性化</h2>  
+		<p>　这一章我觉得有些无聊，书里首先提出了监督型学习和无监督型学习，所谓监督型学习就是利用知道答案的样本进行训练，而聚类是一种无监督型学习，就是说，将一些样本数据进行聚合，组成群组，构成一些结构。而聚合的根据就是样本与样本之间的距离，这里回到第二章的内容；最后将聚类的结果绘制成一个树状图，或者别的图，挺无聊的。第三章的后部分又提出了一个叫k-means聚类的玩意。这个东西其实也是聚类，不过思想有所不同。<br>　将集合中的每个向量看作一个平面上的点（向量这一概念在第二章有提及，是我自己归纳）先随机确定k个点，然后把各个数据想分配给最临近的点，作为同一群组，然后将随机点变为此群组中的平均点（重心），然后重复随机的过程，直到某一此的结果与上一次的结果相同，则停止。</p>
+  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/技术之旁门左道/">技术之旁门左道</a>
-  </div>
 
 </div>
 
@@ -138,7 +115,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2016/02/14/利用Hexo建设个人博客/" data-title="利用Hexo建设个人博客 | macwu&#39;s blog" data-tsina="2960618734" class="share clearfix">
+	  <div data-url="http://yoursite.com/2016/02/23/集体智慧编程-第三章/" data-title="第三章：聚类、群组 | macwu&#39;s blog" data-tsina="2960618734" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -152,13 +129,21 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2016/02/23/《集体智慧编程》-第三章：群组、聚类/" title="《集体智慧编程》-第三章：群组、聚类">
+ <a href="/2016/02/23/《集体智慧编程》-第一、二章：距离/" title="《集体智慧编程》-第一、二章：距离">
   <strong>上一篇：</strong><br/>
   <span>
-  《集体智慧编程》-第三章：群组、聚类</span>
+  《集体智慧编程》-第一、二章：距离</span>
 </a>
 </div>
 
+
+<div class="next">
+<a href="/2016/02/23/《集体智慧编程》-第三章：群组、聚类/"  title="《集体智慧编程》-第三章：群组、聚类">
+ <strong>下一篇：</strong><br/> 
+ <span>《集体智慧编程》-第三章：群组、聚类
+</span>
+</a>
+</div>
 
 </nav>
 
@@ -170,7 +155,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目錄</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo_on_Git"><span class="toc-number">1.</span> <span class="toc-text">Hexo on Git  </span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo_u7684_u5B89_u88C5"><span class="toc-number">2.</span> <span class="toc-text">Hexo的安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo_u7684_u90E8_u7F72"><span class="toc-number">3.</span> <span class="toc-text">Hexo的部署</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo_u4E3B_u9898_u7684_u5B89_u88C5_u53CA_u4E2A_u6027_u5316"><span class="toc-number">4.</span> <span class="toc-text">Hexo主题的安装及个性化</span></a></li></ol>
+ 
  
   </div>
 
