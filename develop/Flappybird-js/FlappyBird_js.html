@@ -1,0 +1,107 @@
+
+  
+    <html>
+  <head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"></head>
+  <body>
+    <div id="game"></div>
+    <script type="text/javascript" src="https://rawgithub.com/craftyjs/Crafty/release/dist/crafty-min.js"></script>
+    <script>
+      Crafty.init(288, 512, document.getElementById('game'));
+
+      //point
+      var point = 0;
+      //bird lives or not
+      var birdAlive = true;
+      //touch enable
+      Crafty.multitouch(true);
+
+      //background definition
+      this.backGround = Crafty.e('background, 2D, Canvas, Image, Motion, Mouse, Touch')
+        .attr({w:574, h:Crafty.viewport.height})
+        .image("flappybird_pics/bg_repeat_day.png", "no-repeat")
+        //touch to fly
+        .bind('TouchStart', function(TouchPoint){
+          Crafty.trigger("KeyDown", {key: Crafty.keys.UP_ARROW});
+        })
+        //click to fly
+        .bind('Click', function(MouseEvent){
+          Crafty.trigger("KeyDown", {key: Crafty.keys.UP_ARROW});
+        });
+        this.backGround.vx -= 8;
+
+      //the points square
+      var pointSquare = Crafty.e('pointSquare, Canvas, 2D, Image')
+        .attr({x:144, y:256, w:48, h:48})
+        .image("flappybird_pics"+"/font_0"+(point+48)+""+".png");
+      
+      //floor definition
+      var floor = Crafty.e('Floor, 2D, Canvas, Color')
+        .attr({x:0, y:512, w:288, h:1})
+        .color('green');
+
+      
+      //the tag for bird's life
+      var bird = Crafty.e('bird, 2D, Canvas, Image, Color, Twoway, Gravity, Jumper, Collision')
+        .attr({x:30, y:100, w:48, h:48})
+        .image("flappybird_pics/bird0_1.png", "repeat")
+        .twoway(100)
+        .gravityConst(800)
+        .gravity('Floor');
+        //give the bird ability to jump
+        bird.hasDoubleJumpPowerUp = true;
+        bird.bind("CheckJumping", function(floor){
+          //if the bird in the sky, it can jump. once bird on the floor it dies
+          if (!floor && birdAlive) {
+            bird.canJump = true;
+            bird.hasDoubleJumpPowerUp = true;
+          }else if (floor) {
+            bird.canJump = false;
+          }
+        });
+        bird.jumper(200, ['UP_ARROW']);
+        //if hit the pipe
+        bird.onHit('Pipe', function(){
+          birdAlive = false;
+        });
+
+      //touch the point line to score
+      var pointLine = Crafty.e('pointLine, 2D, Color, Motion')
+        .attr({x:340, y:Crafty.math.randomInt(180, 280), w:1, h:Crafty.math.randomInt(2, 4)*bird.h})
+        .color("red")
+        //check in every frame
+        .bind('EnterFrame', function (){
+          //pipe out of the bound, reset the pipes and scoreline
+          if (this.x <= 0) {
+            this.x = 340;
+            this.y = Crafty.math.randomInt(180, 280);
+            this.h = Crafty.math.randomInt(1, 3)*bird.h*1.3
+            pipeUpper.x = this.x - 52;
+            pipeLower.x = this.x - 52;
+            
+            pipeLower.y = this.y + pointLine.h;
+            pipeUpper.y = pipeLower.y - this.h - pipeUpper.h;
+          }
+
+          //when backGround.x is 288 reset its position
+          if (backGround.x <= -288) {
+            backGround.x = 0;
+          }
+        });
+        pointLine.vx -= 30;
+
+      //avoid the lower pipe to survive
+      var pipeLower = Crafty.e('Pipe, 2D, Canvas, Image, Motion')
+        .attr({x:pointLine.x - 52, y:pointLine.y + pointLine.h, w:52, h:320})
+        .image("flappybird_pics/pipe_up.png", "repeat");
+        pipeLower.vx -= 30;
+
+      //avoid the upper pipe to survive
+      var pipeUpper = Crafty.e('Pipe, 2D, Canvas, Image, Motion')
+        .attr({x:pointLine.x - 52, y:pipeLower.y - pointLine.h - 320, w:52, h:320})
+        .image("flappybird_pics/pipe_down.png", "repeat");
+        pipeUpper.vx -= 30;
+    </script>
+  </body>
+</html>
+  

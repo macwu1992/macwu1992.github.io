@@ -1,10 +1,11 @@
 
- <!DOCTYPE HTML>
+  
+    <!DOCTYPE HTML>
 <html >
 <head>
   <meta charset="UTF-8">
   
-    <title>tags | macwu&#39;s blog</title>
+    <title>develop | macwu&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="macwu">
@@ -13,13 +14,13 @@
     
     <meta name="description">
 <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta property="og:title" content="develop">
+<meta property="og:url" content="http://yoursite.com/develop/index.html">
 <meta property="og:site_name" content="macwu's blog">
 <meta property="og:description">
-<meta property="og:updated_time" content="2016-02-23T14:23:08.000Z">
+<meta property="og:updated_time" content="2016-04-18T13:10:17.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="develop">
 <meta name="twitter:description">
 
     
@@ -35,9 +36,9 @@
     <link rel="stylesheet" href="/css/style.css" type="text/css">
 </head>
 
-    <body>
-      <header>
-        
+      <body>
+        <header>
+          
 <div>
 		
 			<div id="imglogo">
@@ -76,24 +77,55 @@
 				</ul>
 			</nav>			
 </div>
-      </header>
-      <div id="container">
-          
-<div class="archive-title" >
-<h2 class="tag-icon">標簽</h2>
+        </header>
+        <div id="container">
+          <div id="main" class="page" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/develop/index.html" title="develop" itemprop="url">develop</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="macwu" target="_blank" itemprop="author">macwu</a>
+		
+  <p class="article-time">
+    <time datetime="2016-04-18T13:10:17.000Z" itemprop="datePublished"> 發表於 2016-04-18</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
 
-<a data-src="/tags/技术之旁门左道/" href="#技术之旁门左道" title="技术之旁门左道">技术之旁门左道<sup>1</sup></a>
 
 </div>
-<div id="main" class="archive-part">
-<div class="all-list-box"></div>
-</div>
 
 
 
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://yoursite.com/develop/index.html" data-title="develop | macwu&#39;s blog" data-tsina="2960618734" class="share clearfix">
+	  </div>
+	
+	</div>
 
-      </div>
-      <footer><div id="footer" >
+
+</footer>
+
+   	       
+	</article>
+	
+	
+
+</div>  
+        </div>
+        <footer><div id="footer" >
 	
 	<div class="line">
 		<span></span>
@@ -138,7 +170,7 @@
 		</p>
 </div>
 </footer>
-      <script src="/js/jquery-2.0.3.min.js"></script>
+        <script src="/js/jquery-2.0.3.min.js"></script>
 <script src="/js/jquery.imagesloaded.min.js"></script>
 <script src="/js/gallery.js"></script>
 <script src="/js/jquery.qrcode-0.12.0.min.js"></script>
@@ -189,30 +221,61 @@ $(document).ready(function(){
 </script>
 
 
-
-
-
-
-
-
-
 <script type="text/javascript">
 $(document).ready(function(){ 
-  var list    = $('.archive-title a'),
-      box     = $('.all-list-box'),
-      first   = $('.archive-title a:first-of-type');
-      box.load(first.attr('data-src').toString()+' #archive-page');
-      first.addClass('current');
-  list.each(function(){
-    $(this).click(function(){
-      var listSrc=$(this).attr('data-src').toString()+' #archive-page';
-      box.load(listSrc);
-      list.removeClass('current');
-      $(this).addClass('current');
-     });  
-    });
-  }); 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
 </script>
+
+
+
+
+
+
+
 
 
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
@@ -275,5 +338,6 @@ var _hmt = _hmt || [];
 
 <!-- Tiny_search End -->
 
-    </body>
-   </html>
+      </body>
+     </html>
+     

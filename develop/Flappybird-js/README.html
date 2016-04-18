@@ -5,23 +5,26 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>about | macwu&#39;s blog</title>
+    <title>macwu&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="macwu">
     
 
     
-    <meta name="description">
+    <meta name="description" content="FlappyBird_jsFlappyBird 业务逻辑：1、鼠标点击，点击一次，鸟向上飘一次，再下坠2、水管不断向左移动3、检查有没有碰撞
+实现：1、背景图嵌入（done）    背景图不断向左移动，表现出小鸟不断向右飞的样子(done)        little trick:将背景图片扩大到两倍，使div只有一倍大小，这样背景图循环起来，没到-288就重置位置为0，看上去就像动画一样2、小鸟">
 <meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta property="og:title" content="macwu's blog">
+<meta property="og:url" content="http://yoursite.com/develop/Flappybird-js/README.html">
 <meta property="og:site_name" content="macwu's blog">
-<meta property="og:description">
-<meta property="og:updated_time" content="2016-02-14T13:20:01.000Z">
+<meta property="og:description" content="FlappyBird_jsFlappyBird 业务逻辑：1、鼠标点击，点击一次，鸟向上飘一次，再下坠2、水管不断向左移动3、检查有没有碰撞
+实现：1、背景图嵌入（done）    背景图不断向左移动，表现出小鸟不断向右飞的样子(done)        little trick:将背景图片扩大到两倍，使div只有一倍大小，这样背景图循环起来，没到-288就重置位置为0，看上去就像动画一样2、小鸟">
+<meta property="og:updated_time" content="2016-04-18T13:17:49.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
-<meta name="twitter:description">
+<meta name="twitter:title" content="macwu's blog">
+<meta name="twitter:description" content="FlappyBird_jsFlappyBird 业务逻辑：1、鼠标点击，点击一次，鸟向上飘一次，再下坠2、水管不断向左移动3、检查有没有碰撞
+实现：1、背景图嵌入（done）    背景图不断向左移动，表现出小鸟不断向右飞的样子(done)        little trick:将背景图片扩大到两倍，使div只有一倍大小，这样背景图循环起来，没到-288就重置位置为0，看上去就像动画一样2、小鸟">
 
     
     <link rel="alternative" href="/atom.xml" title="macwu&#39;s blog" type="application/atom+xml">
@@ -85,20 +88,22 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/about/index.html" title="about" itemprop="url">about</a>
+      <a href="/develop/Flappybird-js/README.html" title="" itemprop="url"></a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="macwu" target="_blank" itemprop="author">macwu</a>
 		
   <p class="article-time">
-    <time datetime="2016-02-14T13:20:01.000Z" itemprop="datePublished"> 發表於 2016-02-14</time>
+    <time datetime="2016-04-18T13:20:56.000Z" itemprop="datePublished"> 發表於 2016-04-18</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
-		  
+		<h1 id="FlappyBird_js"><a href="#FlappyBird_js" class="headerlink" title="FlappyBird_js"></a>FlappyBird_js</h1><p>FlappyBird 业务逻辑：<br>1、鼠标点击，点击一次，鸟向上飘一次，再下坠<br>2、水管不断向左移动<br>3、检查有没有碰撞</p>
+<p>实现：<br>1、背景图嵌入（done）<br>    背景图不断向左移动，表现出小鸟不断向右飞的样子(done)<br>        little trick:将背景图片扩大到两倍，使div只有一倍大小，这样背景图循环起来，没到-288就重置位置为0，看上去就像动画一样<br>2、小鸟先自由落体，再响应’SPACE’按键事件弹跳（done）<br>    响应”鼠标点击”小鸟跳跃(done)<br>    响应”touch”,小鸟跳跃(done)<br>    Crafty.trigger(“KeyDown”, {key: Crafty.keys.UP_ARROW});触发跳跃(done)<br>3、背景图作为不断向左移动<br>4、pipe不断向左移，若小鸟从中间穿过，得分，碰到上下任一块，dies<br>    获得一个随机数表示得分线的位置，得分线长度为三个小鸟的宽度<br>    得分线上、下部各为一个entity(done)<br>    得分线与两个entity一起向左移动；(done)<br>    若碰得分线且没碰管道，得分；碰到管道，dies(done)<br>        使用Collision组件中的onHit()方法，检测是否与pipe碰撞<br>    管道出界后，重新获得随机数，管道的循环解决！(done)<br>        使用.bind(‘EnterFrame’, function (){<br>            if(…){<br>            …<br>        }<br>        })<br>        绑定在得分线上，当出界时，将横坐标重置</p>
+  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
@@ -110,7 +115,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/about/index.html" data-title="about | macwu&#39;s blog" data-tsina="2960618734" class="share clearfix">
+	  <div data-url="http://yoursite.com/develop/Flappybird-js/README.html" data-title="macwu&#39;s blog" data-tsina="2960618734" class="share clearfix">
 	  </div>
 	
 	</div>

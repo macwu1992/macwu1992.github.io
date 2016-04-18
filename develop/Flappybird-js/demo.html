@@ -1,0 +1,74 @@
+
+  
+    
+Skip to content
+This repository
+
+    Pull requests
+    Issues
+    Gist
+
+    @macwu1992
+
+10
+10
+
+    5
+
+craftyjs/demos
+Code
+Issues 0
+Pull requests 0
+Wiki
+Pulse
+Graphs
+demos/devDemos/example_realisticJump.html
+79a2394 on 13 Nov 2015
+@mucaho mucaho Update example_realisticJump.html
+45 lines (39 sloc) 1.4 KB
+<html>
+  <head></head>
+  <body>
+    <div id="game"></div>
+    <script src="https://rawgithub.com/craftyjs/Crafty/release/dist/crafty-min.js"></script>
+    <script>
+      Crafty.init(600, 300, document.getElementById('game'));
+      Crafty.background('rgb(127,127,127)');
+      Crafty.e("2D, DOM, Color, platform")
+        .attr({ x: 0, y: 280, w: 600, h: 1 })
+        .color('rgb(0,255,0)');
+      Crafty.e('2D, DOM, Color, platform')
+        .attr({ x: 200, y: 110, w: 60, h: 1 })
+        .color('rgb(0,255,0)');
+      Crafty.e('2D, DOM, Color, platform')
+        .attr({ x: 250, y: 120, w: 60, h: 1 })
+        .color('rgb(0,255,0)');
+      Crafty.e('2D, DOM, Color, platform')
+        .attr({ x: 300, y: 240, w: 60, h: 1 })
+        .color('rgb(0,255,0)');
+      Crafty.e("2D, DOM, Color, Gravity, Twoway")
+        .attr({ x: 0, y: 100, w: 32, h: 32})
+        .color('rgb(0,0,255)')
+        .gravityConst(1)
+        .twoway(5,17)
+        .gravity("platform")
+        .bind("LandedOnGround", function(g) {
+          console.log("Landed on ground with id", g[0]);
+        })
+        .bind("LiftedOffGround", function(g) {
+          console.log("Lifted off ground with id", g[0]);
+        })
+        .bind("CheckLanding", function(ground) {
+          if (this._y + this._h > ground._y + this._dy) // forbid landing, if player's feet are not above ground
+            this.canLand = false;
+        });
+    </script>
+  </body>
+</html>
+
+    Status API Training Shop Blog About 
+
+    © 2016 GitHub, Inc. Terms Privacy Security Contact Help 
+
+
+  
