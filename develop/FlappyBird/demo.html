@@ -1,0 +1,71 @@
+<!DOCTYPE html><html lang="null"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title> | macwu's blog</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/4.2.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">macwu's blog</h1><a id="logo" href="/.">macwu's blog</a><p class="description"></p></div><div id="nav-menu"><a href="/."><i class="fa fa-home"> 首頁</i></a><a href="/archives/"><i class="fa fa-archive"> 所有文章</i></a><a href="/about/"><i class="fa fa-user"> 關於</i></a><a href="/atom.xml"><i class="fa fa-rss"> 訂閱</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title"></h1><div class="post-content">
+Skip to content
+This repository
+
+    Pull requests
+    Issues
+    Gist
+
+    @macwu1992
+
+10
+10
+
+    5
+
+craftyjs/demos
+Code
+Issues 0
+Pull requests 0
+Wiki
+Pulse
+Graphs
+demos/devDemos/example_realisticJump.html
+79a2394 on 13 Nov 2015
+@mucaho mucaho Update example_realisticJump.html
+45 lines (39 sloc) 1.4 KB
+<html>
+  <head></head>
+  <body>
+    <div id="game"></div>
+    <script src="https://rawgithub.com/craftyjs/Crafty/release/dist/crafty-min.js"></script>
+    <script>
+      Crafty.init(600, 300, document.getElementById('game'));
+      Crafty.background('rgb(127,127,127)');
+      Crafty.e("2D, DOM, Color, platform")
+        .attr({ x: 0, y: 280, w: 600, h: 1 })
+        .color('rgb(0,255,0)');
+      Crafty.e('2D, DOM, Color, platform')
+        .attr({ x: 200, y: 110, w: 60, h: 1 })
+        .color('rgb(0,255,0)');
+      Crafty.e('2D, DOM, Color, platform')
+        .attr({ x: 250, y: 120, w: 60, h: 1 })
+        .color('rgb(0,255,0)');
+      Crafty.e('2D, DOM, Color, platform')
+        .attr({ x: 300, y: 240, w: 60, h: 1 })
+        .color('rgb(0,255,0)');
+      Crafty.e("2D, DOM, Color, Gravity, Twoway")
+        .attr({ x: 0, y: 100, w: 32, h: 32})
+        .color('rgb(0,0,255)')
+        .gravityConst(1)
+        .twoway(5,17)
+        .gravity("platform")
+        .bind("LandedOnGround", function(g) {
+          console.log("Landed on ground with id", g[0]);
+        })
+        .bind("LiftedOffGround", function(g) {
+          console.log("Lifted off ground with id", g[0]);
+        })
+        .bind("CheckLanding", function(ground) {
+          if (this._y + this._h > ground._y + this._dy) // forbid landing, if player's feet are not above ground
+            this.canLand = false;
+        });
+    </script>
+  </body>
+</html>
+
+    Status API Training Shop Blog About 
+
+    © 2016 GitHub, Inc. Terms Privacy Security Contact Help 
+
+</div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://yoursite.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分類</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 標籤</i></div><div class="tagcloud"><a href="/tags/技术之旁门左道/" style="font-size: 15px;">技术之旁门左道</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/02/23/《集体智慧编程》-开篇/">《集体智慧编程》-开篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/23/《集体智慧编程》-第一、二章：距离/">《集体智慧编程》-第一、二章：距离</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/23/《集体智慧编程》-第三章：群组、聚类/">《集体智慧编程》-第三章：群组、聚类</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/14/利用Hexo建设个人博客/">利用Hexo建设个人博客</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友站連結</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">macwu's blog.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
