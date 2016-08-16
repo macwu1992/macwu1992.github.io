@@ -1,9 +1,551 @@
-<!DOCTYPE html><html lang="null"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>《集体智慧编程》-开篇 | macwu's blog</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/4.2.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">《集体智慧编程》-开篇</h1><a id="logo" href="/.">macwu's blog</a><p class="description"></p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首頁</i></a><a href="/archives/"><i class="fa fa-archive"> 所有文章</i></a><a href="/about/"><i class="fa fa-user"> 關於</i></a><a href="/develop/"><i class="fa fa-user"> develop</i></a><a href="/atom.xml"><i class="fa fa-rss"> 訂閱</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">《集体智慧编程》-开篇</h1><div class="post-meta">Feb 23, 2016<script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="post-content"><h2 id="u5F00_u7BC7"><a href="#u5F00_u7BC7" class="headerlink" title="开篇"></a>开篇</h2><p>　《集体智慧编程》这本书最开始是舍友推荐的，在还没上研究生的时候就对机器学习，大数据等等有所耳闻，最开始报研究生志愿的时候就是想进大数据海量所，当时也是懵懵懂懂，只是一个感觉而已，一个学期下来，发现海不海量所根本无所谓，人最根本的还是靠自己，而不是外界的名声，不说了，说多了又扯远了。还是转到《集智》上面来。经舍友介绍，这应该算是一本机器学习的入门书，集python、机器学习的基本知识为一体，既学习了机器学习的知识，也锻炼了python的能力，正合我意。<br>　以下为《集智》的内容简介<br>&gt;<br>内容简介  · · · · · ·<br>本书以机器学习与计算统计为主题背景，专门讲述如何挖掘和分析Web上的数据和资源，如何分析用户体验、市场营销、个人品味等诸多信息，并得出有用的结论，通过复杂的算法来从Web网站获取、收集并分析用户的数据和反馈信息，以便创造新的用户价值和商业价值。全书内容翔实，包括协作过滤技术（实现关联产品推荐功能）、集群数据分析（在大规模数据集中发掘相似的数据子集）、搜索引擎核心技术（爬虫、索引、查询引擎、PageRank算法等）、搜索海量信息并进行分析统计得出结论的优化算法、贝叶斯过滤技术（垃圾邮件过滤、文本过滤）、用决策树技术实现预测和决策建模功能、社交网络的信息匹配技术、机器学习和人工智能应用等。<br>本书是Web开发者、架构师、应用工程师等的绝佳选择。</p>
-<p>　所以说，入门，读这本书就对了。在研一上学期的忙忙碌碌中，这本书总是走走停停的读着，前三章也算是读完了，了解了一些基本的东西，很早就想把读的东西做个总结，好好写写，一个就像之前的博文写的，本人脑容量可能真没有１Ｔ那么大，写在电脑里总归好记些；二个是缘于读的另一本书《如何阅读一本书》，其中最重要的思想就是读书这件事也是主动思考的活动，将读书的过程，其中的想法写下来，岂不更加主动，巩固也便于自己整理，创作总是让人更愉悦的。<br>&lt;!–</p>
-<h2 id="u7B2C_u4E00_u3001_u4E8C_u7AE0_uFF1A_u8DDD_u79BB"><a href="#u7B2C_u4E00_u3001_u4E8C_u7AE0_uFF1A_u8DDD_u79BB" class="headerlink" title="第一、二章：距离"></a>第一、二章：距离</h2><p>　第一章扯些大数据、机器学习之类的野棉花，可于大量水文及普及文中查阅，故略。<br>　有时我会反复问自己，到底读到了什么，读完第二章，反复在我脑海中出现的词其实就是距离二字。<br>　《集智》一书跟大部分外文书一样开篇就没有废话，直接“大言不惭的”教你用现成的数据集做一个基于协作性过滤的推荐系统，让人为虎躯一震，直呼过瘾。（其实入门就是要这种兴趣和兴奋感）。协作性推荐系统看上去很唬人，其实这个协作型的意思就是通过别人评分，以及你与别的人的相关度，推荐一些物品。其实里面代码的思考量很少，当时我看代码的时候觉得思想很浅显，但是要用python自己写出来还是费了一些力气，毕竟python还不是很熟。<br>　具体的代码我就不review了，完全是浪费时间，思想主要就是两个距离：  </p>
-<blockquote>
-<p>　　　　　　1.<a href="https://zh.wikipedia.org/wiki/欧几里得距离" target="_blank" rel="external">欧几里得距离</a><br>　　　　　　2.<a href="http://baike.baidu.com/link?url=NtofE5jUoL9uyYU88J9u79fKYf-TxLfRIKbRfC2aDr24VNfFSLDeL9uCRl0OY_xbf5SO44p6VUG6RF0UOXfqsq" target="_blank" rel="external">皮尔逊相关度距离</a>  </p>
-</blockquote>
-<p>　而推荐系统，就是根据人对物品的评分，将人看作一个向量，而向量中的每个分量就是人对每个物品的评分，对各个向量作出欧式距离或者皮尔逊相关度，就可以得出人与人之间对于物品喜好的相似度，其中会对具体计算的数值进行一些处理，避免数值太奇怪，而欧式距离于皮尔逊相关度的差别在于，皮尔逊距离可以避免过于集中，关于距离还有很多详见<a href="http://baike.baidu.com/link?url=QSw_Y99JHgoQ7m8DSAacyVw4vS8sb0OgjPTxZ1N7cqXqGlNw7G5sIVd4RBigEWZWjigGOcklTHzKYTX3PLFSVK" target="_blank" rel="external">相关度</a>–&gt;</p>
-<h2 id="26lt_3B_21_u2013_u7B2C_u4E09_u7AE0_uFF1A_u805A_u7C7B_u3001_u7FA4_u7EC4"><a href="#26lt_3B_21_u2013_u7B2C_u4E09_u7AE0_uFF1A_u805A_u7C7B_u3001_u7FA4_u7EC4" class="headerlink" title="&lt;!–第三章：聚类、群组"></a>&lt;!–第三章：聚类、群组</h2><p>　这一章我觉得有些无聊，书里首先提出了监督型学习和无监督型学习，所谓监督型学习就是利用知道答案的样本进行训练，而聚类是一种无监督型学习，就是说，将一些样本数据进行聚合，组成群组，构成一些结构。而聚合的根据就是样本与样本之间的距离，这里回到第二章的内容；最后将聚类的结果绘制成一个树状图，或者别的图，挺无聊的。第三章的后部分又提出了一个叫k-means聚类的玩意。这个东西其实也是聚类，不过思想有所不同。<br>　将集合中的每个向量看作一个平面上的点（向量这一概念在第二章有提及，是我自己归纳）先随机确定k个点，然后把各个数据想分配给最临近的点，作为同一群组，然后将随机点变为此群组中的平均点（重心），然后重复随机的过程，直到某一此的结果与上一次的结果相同，则停止。–&gt;</p>
-</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://yoursite.com/2016/02/23/《集体智慧编程》-开篇/" data-id="cirmzakb7000clsiugpsg7jcj" class="article-share-link">分享至</a><div class="tags"></div><div class="post-nav"><a href="/2016/02/23/《集体智慧编程》-第一、二章：距离/" class="next">《集体智慧编程》-第一、二章：距离</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://yoursite.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分類</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 標籤</i></div><div class="tagcloud"><a href="/tags/技术之旁门左道/" style="font-size: 15px;">技术之旁门左道</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/02/23/《集体智慧编程》-开篇/">《集体智慧编程》-开篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/23/《集体智慧编程》-第一、二章：距离/">《集体智慧编程》-第一、二章：距离</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/23/《集体智慧编程》-第三章：群组、聚类/">《集体智慧编程》-第三章：群组、聚类</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/14/利用Hexo建设个人博客/">利用Hexo建设个人博客</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友站連結</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">macwu's blog.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <meta charset="utf-8">
+    
+    <title>《集体智慧编程》-开篇 | 沙上有印</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="&amp;#x5F00;&amp;#x7BC7;&amp;#x3000;&amp;#x300A;&amp;#x96C6;&amp;#x4F53;&amp;#x667A;&amp;#x6167;&amp;#x7F16;&amp;#x7A0B;&amp;#x300B;&amp;#x8FD9;&amp;#x672C;&amp;#x4E66;&amp;#x6700;&amp;#x5F00;&amp;#x59CB;&amp;#x662F;&amp;#x820D;&amp;#x53CB;&amp;#x63A8;&amp;#x8350;&amp;#x7684;&amp;#xFF0C;&amp;#x5728;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《集体智慧编程》-开篇">
+<meta property="og:url" content="http://yoursite.com/2016/02/23/《集体智慧编程》-开篇/index.html">
+<meta property="og:site_name" content="沙上有印">
+<meta property="og:description" content="&amp;#x5F00;&amp;#x7BC7;&amp;#x3000;&amp;#x300A;&amp;#x96C6;&amp;#x4F53;&amp;#x667A;&amp;#x6167;&amp;#x7F16;&amp;#x7A0B;&amp;#x300B;&amp;#x8FD9;&amp;#x672C;&amp;#x4E66;&amp;#x6700;&amp;#x5F00;&amp;#x59CB;&amp;#x662F;&amp;#x820D;&amp;#x53CB;&amp;#x63A8;&amp;#x8350;&amp;#x7684;&amp;#xFF0C;&amp;#x5728;">
+<meta property="og:image" content="http://www.chuangyimao.com/uploads/news/20141023/14102311120087200e7a20.jpg">
+<meta property="og:updated_time" content="2016-08-16T07:44:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="《集体智慧编程》-开篇">
+<meta name="twitter:description" content="&amp;#x5F00;&amp;#x7BC7;&amp;#x3000;&amp;#x300A;&amp;#x96C6;&amp;#x4F53;&amp;#x667A;&amp;#x6167;&amp;#x7F16;&amp;#x7A0B;&amp;#x300B;&amp;#x8FD9;&amp;#x672C;&amp;#x4E66;&amp;#x6700;&amp;#x5F00;&amp;#x59CB;&amp;#x662F;&amp;#x820D;&amp;#x53CB;&amp;#x63A8;&amp;#x8350;&amp;#x7684;&amp;#xFF0C;&amp;#x5728;">
+    
+
+    
+        <link rel="alternate" href="/" title="沙上有印" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/img/favicon.ico" />
+    
+
+    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/vendor/open-sans/styles.css" type="text/css">
+    <link rel="stylesheet" href="/vendor/source-code-pro/styles.css" type="text/css">
+
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+    <script src="/vendor/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+    
+    
+        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css" type="text/css">
+    
+    
+    
+    
+
+</head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">沙上有印</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/.">首页</a>
+                
+                    <a class="main-nav-link" href="/archives">存档</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
+                
+                    <a class="main-nav-link" href="/tags">标签</a>
+                
+                    <a class="main-nav-link" href="/about">关于</a>
+                
+            </nav>
+            
+                
+                <nav id="sub-nav">
+                    <div class="profile" id="profile-nav">
+                        <a id="profile-anchor" href="javascript:;">
+                            <img class="avatar" src="/css/images/avatar.png" />
+                            <i class="fa fa-caret-down"></i>
+                        </a>
+                    </div>
+                </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js" type="text/javascript"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/.">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">存档</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">关于</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+                
+
+<aside id="profile">
+    <div class="inner profile-inner">
+        <div class="base-info profile-block">
+            <img id="avatar" src="/css/images/avatar.png" />
+            <h2 id="name">macwu</h2>
+            <h3 id="title">Softwre Developer &amp; Data Miner</h3>
+            <span id="location"><i class="fa fa-map-marker"></i>Shanghai, China</span>
+            <a id="follow" target="_blank" href="https://github.com/macwu1992/">关注我</a>
+        </div>
+        <div class="article-info profile-block">
+            <div class="article-info-block">
+                4
+                <span>文章</span>
+            </div>
+            <div class="article-info-block">
+                4
+                <span>标签</span>
+            </div>
+        </div>
+        
+        <div class="profile-block social-links">
+            <table>
+                <tr>
+                    
+                    
+                    <td>
+                        <a href="http://github.com/macwu1992" target="_blank" title="github" class=tooltip>
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/" target="_blank" title="twitter" class=tooltip>
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="http://www.facebook.com/macwu1992/" target="_blank" title="facebook" class=tooltip>
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/" target="_blank" title="dribbble" class=tooltip>
+                            <i class="fa fa-dribbble"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/" target="_blank" title="rss" class=tooltip>
+                            <i class="fa fa-rss"></i>
+                        </a>
+                    </td>
+                    
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+</aside>
+
+            
+            <section id="main"><article id="post-《集体智慧编程》-开篇" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+            《集体智慧编程》-开篇
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2016/02/23/《集体智慧编程》-开篇/">
+            <time datetime="2016-02-23T13:58:58.000Z" itemprop="datePublished">2016-02-23</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/读书笔记/">读书笔记</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/读书笔记/集体智慧编程/">集体智慧编程</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/机器学习/">机器学习</a>, <a class="tag-link" href="/tags/读书/">读书</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h2 id="u5F00_u7BC7"><a href="#u5F00_u7BC7" class="headerlink" title="&#x5F00;&#x7BC7;"></a>&#x5F00;&#x7BC7;</h2><p>&#x3000;&#x300A;&#x96C6;&#x4F53;&#x667A;&#x6167;&#x7F16;&#x7A0B;&#x300B;&#x8FD9;&#x672C;&#x4E66;&#x6700;&#x5F00;&#x59CB;&#x662F;&#x820D;&#x53CB;&#x63A8;&#x8350;&#x7684;&#xFF0C;&#x5728;&#x8FD8;&#x6CA1;&#x4E0A;&#x7814;&#x7A76;&#x751F;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x5BF9;&#x673A;&#x5668;&#x5B66;&#x4E60;&#xFF0C;&#x5927;&#x6570;&#x636E;&#x7B49;&#x7B49;&#x6709;&#x6240;&#x8033;&#x95FB;&#xFF0C;&#x6700;&#x5F00;&#x59CB;&#x62A5;&#x7814;&#x7A76;&#x751F;&#x5FD7;&#x613F;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x662F;&#x60F3;&#x8FDB;&#x5927;&#x6570;&#x636E;&#x6D77;&#x91CF;&#x6240;&#xFF0C;&#x5F53;&#x65F6;&#x4E5F;&#x662F;&#x61F5;&#x61F5;&#x61C2;&#x61C2;&#xFF0C;&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x611F;&#x89C9;&#x800C;&#x5DF2;&#xFF0C;&#x4E00;&#x4E2A;&#x5B66;&#x671F;&#x4E0B;&#x6765;&#xFF0C;&#x53D1;&#x73B0;&#x6D77;&#x4E0D;&#x6D77;&#x91CF;&#x6240;&#x6839;&#x672C;&#x65E0;&#x6240;&#x8C13;&#xFF0C;&#x4EBA;&#x6700;&#x6839;&#x672C;&#x7684;&#x8FD8;&#x662F;&#x9760;&#x81EA;&#x5DF1;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5916;&#x754C;&#x7684;&#x540D;&#x58F0;&#xFF0C;&#x4E0D;&#x8BF4;&#x4E86;&#xFF0C;&#x8BF4;&#x591A;&#x4E86;&#x53C8;&#x626F;&#x8FDC;&#x4E86;&#x3002;&#x8FD8;&#x662F;&#x8F6C;&#x5230;&#x300A;&#x96C6;&#x667A;&#x300B;&#x4E0A;&#x9762;&#x6765;&#x3002;&#x7ECF;&#x820D;&#x53CB;&#x4ECB;&#x7ECD;&#xFF0C;&#x8FD9;&#x5E94;&#x8BE5;&#x7B97;&#x662F;&#x4E00;&#x672C;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x7684;&#x5165;&#x95E8;&#x4E66;&#xFF0C;&#x96C6;python&#x3001;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x7684;&#x57FA;&#x672C;&#x77E5;&#x8BC6;&#x4E3A;&#x4E00;&#x4F53;&#xFF0C;&#x65E2;&#x5B66;&#x4E60;&#x4E86;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x7684;&#x77E5;&#x8BC6;&#xFF0C;&#x4E5F;&#x953B;&#x70BC;&#x4E86;python&#x7684;&#x80FD;&#x529B;&#xFF0C;&#x6B63;&#x5408;&#x6211;&#x610F;&#x3002;<br><a id="more"></a><br>&#x3000;&#x4EE5;&#x4E0B;&#x4E3A;&#x300A;&#x96C6;&#x667A;&#x300B;&#x7684;&#x5185;&#x5BB9;&#x7B80;&#x4ECB;<br>&gt;<br>&#x5185;&#x5BB9;&#x7B80;&#x4ECB;  &#xB7; &#xB7; &#xB7; &#xB7; &#xB7; &#xB7;<br>&#x672C;&#x4E66;&#x4EE5;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x4E0E;&#x8BA1;&#x7B97;&#x7EDF;&#x8BA1;&#x4E3A;&#x4E3B;&#x9898;&#x80CC;&#x666F;&#xFF0C;&#x4E13;&#x95E8;&#x8BB2;&#x8FF0;&#x5982;&#x4F55;&#x6316;&#x6398;&#x548C;&#x5206;&#x6790;Web&#x4E0A;&#x7684;&#x6570;&#x636E;&#x548C;&#x8D44;&#x6E90;&#xFF0C;&#x5982;&#x4F55;&#x5206;&#x6790;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#x3001;&#x5E02;&#x573A;&#x8425;&#x9500;&#x3001;&#x4E2A;&#x4EBA;&#x54C1;&#x5473;&#x7B49;&#x8BF8;&#x591A;&#x4FE1;&#x606F;&#xFF0C;&#x5E76;&#x5F97;&#x51FA;&#x6709;&#x7528;&#x7684;&#x7ED3;&#x8BBA;&#xFF0C;&#x901A;&#x8FC7;&#x590D;&#x6742;&#x7684;&#x7B97;&#x6CD5;&#x6765;&#x4ECE;Web&#x7F51;&#x7AD9;&#x83B7;&#x53D6;&#x3001;&#x6536;&#x96C6;&#x5E76;&#x5206;&#x6790;&#x7528;&#x6237;&#x7684;&#x6570;&#x636E;&#x548C;&#x53CD;&#x9988;&#x4FE1;&#x606F;&#xFF0C;&#x4EE5;&#x4FBF;&#x521B;&#x9020;&#x65B0;&#x7684;&#x7528;&#x6237;&#x4EF7;&#x503C;&#x548C;&#x5546;&#x4E1A;&#x4EF7;&#x503C;&#x3002;&#x5168;&#x4E66;&#x5185;&#x5BB9;&#x7FD4;&#x5B9E;&#xFF0C;&#x5305;&#x62EC;&#x534F;&#x4F5C;&#x8FC7;&#x6EE4;&#x6280;&#x672F;&#xFF08;&#x5B9E;&#x73B0;&#x5173;&#x8054;&#x4EA7;&#x54C1;&#x63A8;&#x8350;&#x529F;&#x80FD;&#xFF09;&#x3001;&#x96C6;&#x7FA4;&#x6570;&#x636E;&#x5206;&#x6790;&#xFF08;&#x5728;&#x5927;&#x89C4;&#x6A21;&#x6570;&#x636E;&#x96C6;&#x4E2D;&#x53D1;&#x6398;&#x76F8;&#x4F3C;&#x7684;&#x6570;&#x636E;&#x5B50;&#x96C6;&#xFF09;&#x3001;&#x641C;&#x7D22;&#x5F15;&#x64CE;&#x6838;&#x5FC3;&#x6280;&#x672F;&#xFF08;&#x722C;&#x866B;&#x3001;&#x7D22;&#x5F15;&#x3001;&#x67E5;&#x8BE2;&#x5F15;&#x64CE;&#x3001;PageRank&#x7B97;&#x6CD5;&#x7B49;&#xFF09;&#x3001;&#x641C;&#x7D22;&#x6D77;&#x91CF;&#x4FE1;&#x606F;&#x5E76;&#x8FDB;&#x884C;&#x5206;&#x6790;&#x7EDF;&#x8BA1;&#x5F97;&#x51FA;&#x7ED3;&#x8BBA;&#x7684;&#x4F18;&#x5316;&#x7B97;&#x6CD5;&#x3001;&#x8D1D;&#x53F6;&#x65AF;&#x8FC7;&#x6EE4;&#x6280;&#x672F;&#xFF08;&#x5783;&#x573E;&#x90AE;&#x4EF6;&#x8FC7;&#x6EE4;&#x3001;&#x6587;&#x672C;&#x8FC7;&#x6EE4;&#xFF09;&#x3001;&#x7528;&#x51B3;&#x7B56;&#x6811;&#x6280;&#x672F;&#x5B9E;&#x73B0;&#x9884;&#x6D4B;&#x548C;&#x51B3;&#x7B56;&#x5EFA;&#x6A21;&#x529F;&#x80FD;&#x3001;&#x793E;&#x4EA4;&#x7F51;&#x7EDC;&#x7684;&#x4FE1;&#x606F;&#x5339;&#x914D;&#x6280;&#x672F;&#x3001;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x548C;&#x4EBA;&#x5DE5;&#x667A;&#x80FD;&#x5E94;&#x7528;&#x7B49;&#x3002;<br>&#x672C;&#x4E66;&#x662F;Web&#x5F00;&#x53D1;&#x8005;&#x3001;&#x67B6;&#x6784;&#x5E08;&#x3001;&#x5E94;&#x7528;&#x5DE5;&#x7A0B;&#x5E08;&#x7B49;&#x7684;&#x7EDD;&#x4F73;&#x9009;&#x62E9;&#x3002;</p>
+<p>&#x3000;&#x6240;&#x4EE5;&#x8BF4;&#xFF0C;&#x5165;&#x95E8;&#xFF0C;&#x8BFB;&#x8FD9;&#x672C;&#x4E66;&#x5C31;&#x5BF9;&#x4E86;&#x3002;&#x5728;&#x7814;&#x4E00;&#x4E0A;&#x5B66;&#x671F;&#x7684;&#x5FD9;&#x5FD9;&#x788C;&#x788C;&#x4E2D;&#xFF0C;&#x8FD9;&#x672C;&#x4E66;&#x603B;&#x662F;&#x8D70;&#x8D70;&#x505C;&#x505C;&#x7684;&#x8BFB;&#x7740;&#xFF0C;&#x524D;&#x4E09;&#x7AE0;&#x4E5F;&#x7B97;&#x662F;&#x8BFB;&#x5B8C;&#x4E86;&#xFF0C;&#x4E86;&#x89E3;&#x4E86;&#x4E00;&#x4E9B;&#x57FA;&#x672C;&#x7684;&#x4E1C;&#x897F;&#xFF0C;&#x5F88;&#x65E9;&#x5C31;&#x60F3;&#x628A;&#x8BFB;&#x7684;&#x4E1C;&#x897F;&#x505A;&#x4E2A;&#x603B;&#x7ED3;&#xFF0C;&#x597D;&#x597D;&#x5199;&#x5199;&#xFF0C;&#x4E00;&#x4E2A;&#x5C31;&#x50CF;&#x4E4B;&#x524D;&#x7684;&#x535A;&#x6587;&#x5199;&#x7684;&#xFF0C;&#x672C;&#x4EBA;&#x8111;&#x5BB9;&#x91CF;&#x53EF;&#x80FD;&#x771F;&#x6CA1;&#x6709;&#xFF11;&#xFF34;&#x90A3;&#x4E48;&#x5927;&#xFF0C;&#x5199;&#x5728;&#x7535;&#x8111;&#x91CC;&#x603B;&#x5F52;&#x597D;&#x8BB0;&#x4E9B;&#xFF1B;&#x4E8C;&#x4E2A;&#x662F;&#x7F18;&#x4E8E;&#x8BFB;&#x7684;&#x53E6;&#x4E00;&#x672C;&#x4E66;&#x300A;&#x5982;&#x4F55;&#x9605;&#x8BFB;&#x4E00;&#x672C;&#x4E66;&#x300B;&#xFF0C;&#x5176;&#x4E2D;&#x6700;&#x91CD;&#x8981;&#x7684;&#x601D;&#x60F3;&#x5C31;&#x662F;&#x8BFB;&#x4E66;&#x8FD9;&#x4EF6;&#x4E8B;&#x4E5F;&#x662F;&#x4E3B;&#x52A8;&#x601D;&#x8003;&#x7684;&#x6D3B;&#x52A8;&#xFF0C;&#x5C06;&#x8BFB;&#x4E66;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x5176;&#x4E2D;&#x7684;&#x60F3;&#x6CD5;&#x5199;&#x4E0B;&#x6765;&#xFF0C;&#x5C82;&#x4E0D;&#x66F4;&#x52A0;&#x4E3B;&#x52A8;&#xFF0C;&#x5DE9;&#x56FA;&#x4E5F;&#x4FBF;&#x4E8E;&#x81EA;&#x5DF1;&#x6574;&#x7406;&#xFF0C;&#x521B;&#x4F5C;&#x603B;&#x662F;&#x8BA9;&#x4EBA;&#x66F4;&#x6109;&#x60A6;&#x7684;&#x3002;</p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://yoursite.com/2016/02/23/《集体智慧编程》-开篇/" data-id="cirx6085k000tdriuhp4zpw5m" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://yoursite.com/2016/02/23/《集体智慧编程》-开篇/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/02/23/《集体智慧编程》-开篇/">评论</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2016/02/23/《集体智慧编程》-第一、二章：距离/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">《集体智慧编程》-第一、二章：距离</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+</section>
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">最新文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/02/23/《集体智慧编程》-开篇/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://www.chuangyimao.com/uploads/news/20141023/14102311120087200e7a20.jpg)" alt="《集体智慧编程》-开篇" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/读书笔记/">读书笔记</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/读书笔记/集体智慧编程/">集体智慧编程</a></p>
+                            <p class="item-title"><a href="/2016/02/23/《集体智慧编程》-开篇/" class="title">《集体智慧编程》-开篇</a></p>
+                            <p class="item-date"><time datetime="2016-02-23T13:58:58.000Z" itemprop="datePublished">2016-02-23</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/02/23/《集体智慧编程》-第一、二章：距离/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://www.chuangyimao.com/uploads/news/20141023/14102311120087200e7a20.jpg)" alt="《集体智慧编程》-第一、二章：距离" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/读书笔记/">读书笔记</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/读书笔记/集体智慧编程/">集体智慧编程</a></p>
+                            <p class="item-title"><a href="/2016/02/23/《集体智慧编程》-第一、二章：距离/" class="title">《集体智慧编程》-第一、二章：距离</a></p>
+                            <p class="item-date"><time datetime="2016-02-23T13:55:02.000Z" itemprop="datePublished">2016-02-23</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/02/23/《集体智慧编程》-第三章：群组、聚类/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://www.chuangyimao.com/uploads/news/20141023/14102311120087200e7a20.jpg)" alt="《集体智慧编程》-第三章：群组、聚类" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/读书笔记/">读书笔记</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/读书笔记/集体智慧编程/">集体智慧编程</a></p>
+                            <p class="item-title"><a href="/2016/02/23/《集体智慧编程》-第三章：群组、聚类/" class="title">《集体智慧编程》-第三章：群组、聚类</a></p>
+                            <p class="item-date"><time datetime="2016-02-23T13:29:36.000Z" itemprop="datePublished">2016-02-23</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/02/14/利用Hexo建设个人博客/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://upload.chinaz.com/2015/1016/1444964380585.png)" alt="利用Hexo建设个人博客" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/hexo/">hexo</a></p>
+                            <p class="item-title"><a href="/2016/02/14/利用Hexo建设个人博客/" class="title">利用Hexo建设个人博客</a></p>
+                            <p class="item-date"><time datetime="2016-02-14T07:51:00.000Z" itemprop="datePublished">2016-02-14</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">分类</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/">读书笔记</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/集体智慧编程/">集体智慧编程</a><span class="category-list-count">3</span></li></ul></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">4</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">标签</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/机器学习/">机器学习</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/读书/">读书</a><span class="tag-list-count">3</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/机器学习/" style="font-size: 20px;">机器学习</a> <a href="/tags/读书/" style="font-size: 20px;">读书</a>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">链接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2016 macwu<br>
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_config = function () {
+        
+            this.page.url = 'http://yoursite.com/2016/02/23/《集体智慧编程》-开篇/';
+        
+        this.page.identifier = '《集体智慧编程》-开篇';
+    };
+    (function() { 
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'hexo-theme-icarus' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+
+
+    
+        <script src="/vendor/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js" type="text/javascript"></script>
+
+    </div>
+</body>
+</html>
