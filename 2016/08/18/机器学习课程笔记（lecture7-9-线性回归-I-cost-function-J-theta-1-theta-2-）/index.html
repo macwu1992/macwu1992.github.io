@@ -3,18 +3,28 @@
 <head>
     <meta charset="utf-8">
     
-    <title>tags | 沙上有印</title>
+    <title>机器学习课程笔记（lecture7~9 线性回归 I cost function J(theta_1, theta_2)） | 沙上有印</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="沙上有印&apos;s blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+    <meta name="description" content="&amp;#x5F00;&amp;#x9500;&amp;#x51FD;&amp;#x6570;&amp;#x4E0E;&amp;#x7EBF;&amp;#x6027;&amp;#x56DE;&amp;#x5F52;
+&amp;#x4E00;&amp;#x5143;cost function&amp;#xFF1A;
+
+&amp;#x6709;&amp;#x4E09;&amp;#x4E2A;&amp;#x6837;&amp;#x672C;&amp;#xFF0C;&amp;#x5206;&amp;#x5E03;&amp;#x4E8E;&amp;#x51FD;&amp;#x6570;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="机器学习课程笔记（lecture7~9 线性回归 I cost function J(theta_1, theta_2)）">
+<meta property="og:url" content="http://yoursite.com/2016/08/18/机器学习课程笔记（lecture7-9-线性回归-I-cost-function-J-theta-1-theta-2-）/index.html">
 <meta property="og:site_name" content="沙上有印">
-<meta property="og:description" content="沙上有印&apos;s blog">
-<meta property="og:updated_time" content="2016-02-23T14:23:08.000Z">
+<meta property="og:description" content="&amp;#x5F00;&amp;#x9500;&amp;#x51FD;&amp;#x6570;&amp;#x4E0E;&amp;#x7EBF;&amp;#x6027;&amp;#x56DE;&amp;#x5F52;
+&amp;#x4E00;&amp;#x5143;cost function&amp;#xFF1A;
+
+&amp;#x6709;&amp;#x4E09;&amp;#x4E2A;&amp;#x6837;&amp;#x672C;&amp;#xFF0C;&amp;#x5206;&amp;#x5E03;&amp;#x4E8E;&amp;#x51FD;&amp;#x6570;">
+<meta property="og:image" content="http://3.im.guokr.com/5OadJOVyz1Y90CcJoZX39n_f338dVTnyZ5oodhMO1tXMAQAAAwEAAFBO.png">
+<meta property="og:updated_time" content="2016-08-18T08:16:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
-<meta name="twitter:description" content="沙上有印&apos;s blog">
+<meta name="twitter:title" content="机器学习课程笔记（lecture7~9 线性回归 I cost function J(theta_1, theta_2)）">
+<meta name="twitter:description" content="&amp;#x5F00;&amp;#x9500;&amp;#x51FD;&amp;#x6570;&amp;#x4E0E;&amp;#x7EBF;&amp;#x6027;&amp;#x56DE;&amp;#x5F52;
+&amp;#x4E00;&amp;#x5143;cost function&amp;#xFF1A;
+
+&amp;#x6709;&amp;#x4E09;&amp;#x4E2A;&amp;#x6837;&amp;#x672C;&amp;#xFF0C;&amp;#x5206;&amp;#x5E03;&amp;#x4E8E;&amp;#x51FD;&amp;#x6570;">
     
 
     
@@ -207,16 +217,167 @@
 </aside>
 
             
-            <section id="main"><section class="layout-wrap">
-    <div class="layout-title">
-        <span>tags</span>
-    </div>
-    <div class="layout-wrap-inner tag-cloud">
+            <section id="main"><article id="post-机器学习课程笔记（lecture7-9-线性回归-I-cost-function-J-theta-1-theta-2-）" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-            <a href="/tags/git/" style="font-size: 14px;">git</a> <a href="/tags/hexo/" style="font-size: 14px;">hexo</a> <a href="/tags/学习笔记/" style="font-size: 18.67px;">学习笔记</a> <a href="/tags/机器学习/" style="font-size: 28px;">机器学习</a> <a href="/tags/网络课程/" style="font-size: 18.67px;">网络课程</a> <a href="/tags/读书/" style="font-size: 23.33px;">读书</a>
         
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+            机器学习课程笔记（lecture7~9 线性回归 I cost function J(theta_1, theta_2)）
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2016/08/18/机器学习课程笔记（lecture7-9-线性回归-I-cost-function-J-theta-1-theta-2-）/">
+            <time datetime="2016-08-18T08:12:36.000Z" itemprop="datePublished">2016-08-18</time>
+        </a>
     </div>
-</section></section>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/机器学习/">机器学习</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/机器学习/吴恩达课程/">吴恩达课程</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/学习笔记/">学习笔记</a>, <a class="tag-link" href="/tags/机器学习/">机器学习</a>, <a class="tag-link" href="/tags/网络课程/">网络课程</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>&#x5F00;&#x9500;&#x51FD;&#x6570;&#x4E0E;&#x7EBF;&#x6027;&#x56DE;&#x5F52;</p>
+<p>&#x4E00;&#x5143;cost function&#xFF1A;<br><img src="/2016/08/18/&#x673A;&#x5668;&#x5B66;&#x4E60;&#x8BFE;&#x7A0B;&#x7B14;&#x8BB0;&#xFF08;lecture7-9-&#x7EBF;&#x6027;&#x56DE;&#x5F52;-I-cost-function-J-theta-1-theta-2-&#xFF09;/Users/Tong/hexo/source/_posts/:2016-08-18-&#x673A;&#x5668;&#x5B66;&#x4E60;&#x8BFE;&#x7A0B;&#x7B14;&#x8BB0;&#xFF08;lecture7-9-&#x7EBF;&#x6027;&#x56DE;&#x5F52;-I-cost-function-J-theta-1-theta-2-&#xFF09;/ML learning_7~9_1.png" alt=""><br></p>
+<p><img src="/2016/08/18/&#x673A;&#x5668;&#x5B66;&#x4E60;&#x8BFE;&#x7A0B;&#x7B14;&#x8BB0;&#xFF08;lecture7-9-&#x7EBF;&#x6027;&#x56DE;&#x5F52;-I-cost-function-J-theta-1-theta-2-&#xFF09;/Users/Tong/hexo/source/_posts/:2016-08-18-&#x673A;&#x5668;&#x5B66;&#x4E60;&#x8BFE;&#x7A0B;&#x7B14;&#x8BB0;&#xFF08;lecture7-9-&#x7EBF;&#x6027;&#x56DE;&#x5F52;-I-cost-function-J-theta-1-theta-2-&#xFF09;/ML learning_7~9_2.png" alt=""></p>
+<p>&#x6709;&#x4E09;&#x4E2A;&#x6837;&#x672C;&#xFF0C;&#x5206;&#x5E03;&#x4E8E;&#x51FD;&#x6570;&#x56FE;&#x50CF;&#x4E0A;&#xFF0C;&#x60F3;&#x627E;&#x5230;&#x6700;&#x8D34;&#x5408;&#x6837;&#x672C;&#x7684;&#x51FD;&#x6570;&#xFF08;hypothesis&#xFF09;&#xFF0C;&#x5373;&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x8981;cost function &#x6700;&#x5C0F;&#xFF0C;&#x800C;cost function&#x662F;&#x6837;&#x672C;&#x503C;&#x4E0E;&#x51FD;&#x6570;&#x503C;&#x4E4B;&#x95F4;&#x7684;&#x5E73;&#x5747;&#x6570;&#x3002;</p>
+<p>&#x4E8C;&#x5143;cost function&#xFF1A;</p>
+<p>&#x8981;&#x76F4;&#x89C2;&#x7684;&#x8868;&#x793A;&#x4E8C;&#x5143;&#x7684;cost function &#x5C31;&#x9700;&#x8981;&#x7528;&#x5230;&#x8F6E;&#x5ED3;&#xFF08;contour&#xFF09;&#x8868;&#x793A;&#xFF0C;&#x662F;3d&#x56FE;&#x50CF;&#x6765;&#x8868;&#x793A;&#xFF0C;&#x82E5;&#x8981;&#x6BD4;&#x8F83;&#x65B9;&#x4FBF;&#x7684;&#x8868;&#x793A;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x7528;&#x5230;&#x8F6E;&#x5ED3;&#x7684;&#x6A2A;&#x5207;&#x56FE;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;&#x7B49;&#x9AD8;&#x7EBF;</p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://yoursite.com/2016/08/18/机器学习课程笔记（lecture7-9-线性回归-I-cost-function-J-theta-1-theta-2-）/" data-id="cis01zym7000fx4iub00bfi8m" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://yoursite.com/2016/08/18/机器学习课程笔记（lecture7-9-线性回归-I-cost-function-J-theta-1-theta-2-）/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/08/18/机器学习课程笔记（lecture7-9-线性回归-I-cost-function-J-theta-1-theta-2-）/">评论</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2016/08/18/机器学习课程笔记（lecture1~6 什么是机器学习？）/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">机器学习课程笔记（lecture1~6 什么是机器学习？）</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+</section>
             
                 <aside id="sidebar">
    
@@ -395,13 +556,13 @@
     <script>
     var disqus_config = function () {
         
-            this.page.url = 'http://yoursite.com/tags/index.html';
+            this.page.url = 'http://yoursite.com/2016/08/18/机器学习课程笔记（lecture7-9-线性回归-I-cost-function-J-theta-1-theta-2-）/';
         
-        this.page.identifier = 'undefined';
+        this.page.identifier = '机器学习课程笔记（lecture7-9-线性回归-I-cost-function-J-theta-1-theta-2-）';
     };
     (function() { 
         var d = document, s = d.createElement('script');  
-        s.src = '//' + 'hexo-theme-icarus' + '.disqus.com/count.js';
+        s.src = '//' + 'hexo-theme-icarus' + '.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();
