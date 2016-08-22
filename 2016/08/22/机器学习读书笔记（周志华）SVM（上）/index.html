@@ -14,7 +14,7 @@
 <meta property="og:description" content="&amp;#x7B2C;&amp;#x516D;&amp;#x7AE0;&amp;#x3001;&amp;#x652F;&amp;#x6301;&amp;#x5411;&amp;#x91CF;&amp;#x673A;(Support Vector Machine)&amp;#xFF08;&amp;#x4E0A;&amp;#xFF09;
 &amp;#x5199;&amp;#x5728;&amp;#x524D;&amp;#x9762;&amp;#xFF1A;&amp;#x9605;&amp;#x8BFB;&amp;#x7684;&amp;#x8FC7;&amp;#x7A0B">
 <meta property="og:image" content="http://ww2.sinaimg.cn/small/b07774eegw1f72bgud7boj2086093weh.jpg">
-<meta property="og:updated_time" content="2016-08-22T08:49:36.000Z">
+<meta property="og:updated_time" content="2016-08-22T08:53:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习读书笔记（周志华）SVM（上）">
 <meta name="twitter:description" content="&amp;#x7B2C;&amp;#x516D;&amp;#x7AE0;&amp;#x3001;&amp;#x652F;&amp;#x6301;&amp;#x5411;&amp;#x91CF;&amp;#x673A;(Support Vector Machine)&amp;#xFF08;&amp;#x4E0A;&amp;#xFF09;
@@ -262,7 +262,7 @@
 <p>&#x5728;&#x9605;&#x8BFB;&#x672C;&#x7AE0;&#x4E4B;&#x524D;&#xFF0C;&#x6211;&#x662F;&#x4E00;&#x76F4;&#x4E0D;&#x592A;&#x660E;&#x767D;&#x4EC0;&#x4E48;&#x53EB;&#x652F;&#x6301;&#x5411;&#x91CF;&#x673A;&#x7684;&#xFF0C;&#x4EE5;&#x4E3A;&#x662F;&#x5F88;&#x9AD8;&#x5927;&#x4E0A;&#x7684;&#x4E1C;&#x897F;&#x3002;&#x867D;&#x7136;&#x671B;&#x6587;&#x751F;&#x4E49;&#x662F;&#x4EBA;&#x4E4B;&#x5E38;&#x60C5;&#xFF0C;&#x4F46;&#x4E00;&#x76F4;&#x90FD;&#x662F;&#x4E25;&#x8C28;&#x79D1;&#x5B66;&#x7684;&#x5927;&#x5FCC;&#xFF0C;&#x7279;&#x522B;&#x662F;&#x5BF9;&#x4E8E;&#x6211;&#x8FD9;&#x79CD;&#x6240;&#x8C13;&#x6709;&#x6570;&#x5B66;&#x80CC;&#x666F;&#x7684;&#x4EBA;&#x800C;&#x8A00;&#xFF0C;&#x53EF;&#x4EBA;&#x53C8;&#x4E0D;&#x80FD;&#x5B8C;&#x5168;&#x63A7;&#x5236;&#x81EA;&#x5DF1;&#x7684;&#x601D;&#x7EF4;&#x3002;&#x90A3;&#x4E48;&#xFF0C;&#x4EC0;&#x4E48;&#x662F;&#x652F;&#x6301;&#x5411;&#x91CF;&#x673A;&#xFF1F;&#x5B83;&#x7684;&#x76EE;&#x6807;&#x53C8;&#x662F;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;<br></p>
 <a id="more"></a>
 <h1 id="6-1__u652F_u6301_u5411_u91CF_u673A_u7684_u76EE_u6807"><a href="#6-1__u652F_u6301_u5411_u91CF_u673A_u7684_u76EE_u6807" class="headerlink" title="6.1 &#x652F;&#x6301;&#x5411;&#x91CF;&#x673A;&#x7684;&#x76EE;&#x6807;"></a><font size="5"><em>6.1 &#x652F;&#x6301;&#x5411;&#x91CF;&#x673A;&#x7684;&#x76EE;&#x6807;</em></font></h1><p>&#x652F;&#x6301;&#x5411;&#x91CF;&#x673A;&#xFF08;SVM&#xFF09;&#x662F;&#x5C5E;&#x4E8E;&#x76D1;&#x7763;&#x5B66;&#x4E60;&#x7684;&#x7C7B;&#x522B;&#x7684;&#x3002;&#x662F;&#x7528;&#x6700;&#x7B80;&#x5355;&#x7684;&#x7684;&#x8BDD;&#x6765;&#x8BF4;&#xFF0C;&#x652F;&#x6301;&#x5411;&#x91CF;&#x673A;&#x7684;&#x76EE;&#x6807;&#x5C31;&#x662F;&#x627E;&#x5230;&#x6700;&#x80FD;&#x5212;&#x5206;&#x6570;&#x636E;&#x96C6;&#x7684;<a href="#hyperplane">&#x5212;&#x5206;&#x8D85;&#x5E73;&#x9762;</a>&#xFF0C;&#x6765;&#x5212;&#x5206;&#x6570;&#x636E;&#x96C6;&#xFF0C;&#x4EE5;&#x8FBE;&#x5230;&#x5206;&#x7C7B;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x5F53;&#x7136;&#xFF0C;&#x8FD9;&#x91CC;&#x7684;&#x6570;&#x636E;&#x96C6;&#x5E94;&#x8BE5;&#x662F;&#x5DF2;&#x7ECF;&#x5904;&#x7406;&#x4E3A;&#x5411;&#x91CF;&#x7684;&#x5F62;&#x5F0F;&#x3002;<br></p>
-<p>&#x5047;&#x8BBE;&#x6709;&#x6570;&#x636E;&#x96C6;D=\{(x_1, y_1),(x_2, y_2),&#x2026;,(x_m, y_m)\}&#xFF0C;&#x5176;&#x4E2D;x_i&#x662F;&#x8BAD;&#x7EC3;&#x6570;&#x636E;&#x7684;&#x5411;&#x91CF;&#xFF0C;y_i&#x662F;&#x8BAD;&#x7EC3;&#x6570;&#x636E;&#x7684;&#x5206;&#x7C7B;&#x3002;&#x753B;&#x5728;&#x56FE;&#x4E0A;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF1A;<br></p>
+<p>&#x5047;&#x8BBE;&#x6709;&#x6570;&#x636E;&#x96C6;\(D=\{(x_1, y_1),(x_2, y_2),&#x2026;,(x_m, y_m)\}\)&#xFF0C;&#x5176;&#x4E2D;x_i&#x662F;&#x8BAD;&#x7EC3;&#x6570;&#x636E;&#x7684;&#x5411;&#x91CF;&#xFF0C;y_i&#x662F;&#x8BAD;&#x7EC3;&#x6570;&#x636E;&#x7684;&#x5206;&#x7C7B;&#x3002;&#x753B;&#x5728;&#x56FE;&#x4E0A;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF1A;<br></p>
 <div align="center"><br><img src="http://ww1.sinaimg.cn/small/b07774eegw1f72honcyjaj20e80cbjs1.jpg" alt=""><br><br><font size="2">&#x56FE;6.1 &#x4E09;&#x4E2A;&#x5212;&#x5206;&#x4F7F;&#x6570;&#x636E;&#x96C6;&#x5206;&#x7C7B;&#x5F00;</font><br></div>
 
 <p>&#x8FD9;&#x91CC;&#x7684;&#x9ED1;&#x70B9;&#x548C;&#x767D;&#x70B9;&#x4EE3;&#x8868;&#x4E86;&#x4E0D;&#x540C;&#x7C7B;&#x522B;&#x7684;&#x8BAD;&#x7EC3;&#x6570;&#x636E;&#x3002;&#x7EFF;&#x3001;&#x84DD;&#x3001;&#x7EA2;&#x4E09;&#x6761;&#x7EBF;&#x5212;&#x5206;&#x4E86;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x96C6;&#xFF0C;&#x5B83;&#x4EEC;&#x90FD;&#x662F;<a href="#hyperplane">&#x5212;&#x5206;&#x8D85;&#x5E73;&#x9762;</a>&#x3002;&#x4F46;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x80FD;&#x591F;&#x8FBE;&#x5230;<a href="#max_margin">&#x6700;&#x5927;&#x95F4;&#x9694;</a>&#xFF0C;&#x5373;&#x7EA2;&#x8272;&#x7684;&#x90A3;&#x6761;&#x3002;</p>
@@ -299,7 +299,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2016/08/22/机器学习读书笔记（周志华）SVM（上）/" data-id="cis5s017w0000xmiustp1mmsq" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2016/08/22/机器学习读书笔记（周志华）SVM（上）/" data-id="cis5t20if000f44iu36r58d8y" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
