@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <meta charset="utf-8">
+    
+    <title>算法导论 chp2（排序算法） | 沙上有印</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="2.1 &amp;#x63D2;&amp;#x5165;&amp;#x6392;&amp;#x5E8F;
+&amp;#x5728;&amp;#x4E66;&amp;#x4E2D;&amp;#x7684;&amp;#x63D2;&amp;#x5165;&amp;#x6392;&amp;#x5E8F;&amp;#x63CF;&amp;#x8FF0;&amp;#x5982;&amp;#x4E0B;&amp;#xFF1A;&amp;#x8F93;&amp;#x5165;&amp;#xFF1A;n&amp;#x4E2A;&amp;#x6570;&amp;#xFF08;a1&amp;#xFF0C;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法导论 chp2（排序算法）">
+<meta property="og:url" content="http://yoursite.com/2016/12/25/算法导论 chp2（排序算法）/index.html">
+<meta property="og:site_name" content="沙上有印">
+<meta property="og:description" content="2.1 &amp;#x63D2;&amp;#x5165;&amp;#x6392;&amp;#x5E8F;
+&amp;#x5728;&amp;#x4E66;&amp;#x4E2D;&amp;#x7684;&amp;#x63D2;&amp;#x5165;&amp;#x6392;&amp;#x5E8F;&amp;#x63CF;&amp;#x8FF0;&amp;#x5982;&amp;#x4E0B;&amp;#xFF1A;&amp;#x8F93;&amp;#x5165;&amp;#xFF1A;n&amp;#x4E2A;&amp;#x6570;&amp;#xFF08;a1&amp;#xFF0C;">
+<meta property="og:image" content="http://ww3.sinaimg.cn/mw690/b07774eejw1fb3dxc6ea8j204a064aa0.jpg">
+<meta property="og:updated_time" content="2016-12-25T14:03:26.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="算法导论 chp2（排序算法）">
+<meta name="twitter:description" content="2.1 &amp;#x63D2;&amp;#x5165;&amp;#x6392;&amp;#x5E8F;
+&amp;#x5728;&amp;#x4E66;&amp;#x4E2D;&amp;#x7684;&amp;#x63D2;&amp;#x5165;&amp;#x6392;&amp;#x5E8F;&amp;#x63CF;&amp;#x8FF0;&amp;#x5982;&amp;#x4E0B;&amp;#xFF1A;&amp;#x8F93;&amp;#x5165;&amp;#xFF1A;n&amp;#x4E2A;&amp;#x6570;&amp;#xFF08;a1&amp;#xFF0C;">
+    
+
+    
+        <link rel="alternate" href="/" title="沙上有印" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/img/favicon.ico" />
+    
+
+    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/vendor/open-sans/styles.css" type="text/css">
+    <link rel="stylesheet" href="/vendor/source-code-pro/styles.css" type="text/css">
+
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+    <script src="/vendor/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+    
+    
+        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css" type="text/css">
+    
+    
+    
+    
+
+</head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">沙上有印</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/.">首页</a>
+                
+                    <a class="main-nav-link" href="/archives">存档</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
+                
+                    <a class="main-nav-link" href="/tags">标签</a>
+                
+                    <a class="main-nav-link" href="/about">关于</a>
+                
+            </nav>
+            
+                
+                <nav id="sub-nav">
+                    <div class="profile" id="profile-nav">
+                        <a id="profile-anchor" href="javascript:;">
+                            <img class="avatar" src="/css/images/avatar.png" />
+                            <i class="fa fa-caret-down"></i>
+                        </a>
+                    </div>
+                </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js" type="text/javascript"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/.">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">存档</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">关于</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+                
+
+<aside id="profile">
+    <div class="inner profile-inner">
+        <div class="base-info profile-block">
+            <img id="avatar" src="/css/images/avatar.png" />
+            <h2 id="name">macwu</h2>
+            <h3 id="title">Softwre Developer &amp; Data Miner</h3>
+            <span id="location"><i class="fa fa-map-marker"></i>Shanghai, China</span>
+            <a id="follow" target="_blank" href="https://github.com/macwu1992/">关注我</a>
+        </div>
+        <div class="article-info profile-block">
+            <div class="article-info-block">
+                20
+                <span>文章</span>
+            </div>
+            <div class="article-info-block">
+                14
+                <span>标签</span>
+            </div>
+        </div>
+        
+        <div class="profile-block social-links">
+            <table>
+                <tr>
+                    
+                    
+                    <td>
+                        <a href="http://github.com/macwu1992" target="_blank" title="github" class=tooltip>
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/" target="_blank" title="twitter" class=tooltip>
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="http://www.facebook.com/macwu1992/" target="_blank" title="facebook" class=tooltip>
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/" target="_blank" title="dribbble" class=tooltip>
+                            <i class="fa fa-dribbble"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/" target="_blank" title="rss" class=tooltip>
+                            <i class="fa fa-rss"></i>
+                        </a>
+                    </td>
+                    
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+</aside>
+
+            
+            <section id="main"><article id="post-算法导论 chp2（排序算法）" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+            算法导论 chp2（排序算法）
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2016/12/25/算法导论 chp2（排序算法）/">
+            <time datetime="2016-12-25T13:55:47.000Z" itemprop="datePublished">2016-12-25</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/算法/">算法</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/算法/算法入门/">算法入门</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/算法/">算法</a>, <a class="tag-link" href="/tags/读书笔记/">读书笔记</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>2.1 &#x63D2;&#x5165;&#x6392;&#x5E8F;</p>
+<p>&#x5728;&#x4E66;&#x4E2D;&#x7684;&#x63D2;&#x5165;&#x6392;&#x5E8F;&#x63CF;&#x8FF0;&#x5982;&#x4E0B;&#xFF1A;<br>&#x8F93;&#x5165;&#xFF1A;n&#x4E2A;&#x6570;&#xFF08;a1&#xFF0C;a2&#xFF0C;a3&#xFF0C;&#x2026;&#xFF0C;an&#xFF09;<br>&#x8F93;&#x51FA;&#xFF1A;&#x8F93;&#x5165;&#x5E8F;&#x5217;&#x7684;&#x4E00;&#x4E2A;&#x6392;&#x5217;&#xFF08;&#x5373;&#x91CD;&#x65B0;&#x6392;&#x5E8F;&#xFF09;&#xFF08;a&#x2019;1&#xFF0C;a&#x2019;2&#xFF0C;a&#x2019;3&#xFF0C;&#x2026;&#xFF0C;a&#x2019;n&#xFF09;</p>
+<p>##################################################<br>pseudo-code</p>
+<p>##################################################<br>INSERTION-SORT<br>for j-&gt;2 to length(A)<br>  do key &lt;- A[j]<br>    //Insert A[j] into the sorted sequence A[1,&#x2026;,j-1]<br>    i &lt;- j-1<br>    while i&gt;0 and A[i]&gt;key<br>      do A[i+1] &lt;- A[i]<br>        i &lt;- i-1<br>    A[i+1] &lt;- key</p>
+<p>##################################################<br>java-code</p>
+<p>##################################################<br>package com.macwu.chp1;</p>
+<p>/**</p>
+<ul>
+<li>Created by Tong on 2016/12/25.<br>*/<br>import java.util.Arrays;</li>
+</ul>
+<p>public class InsertSortDemo {<br>     public static void main(String[] args) {<br>         int[] A = {2,12,5,33,52,9};</p>
+<pre><code>    InsertSortDemo insertSortDemo = new InsertSortDemo();
+    int[] sortedA = insertSortDemo.InsertSort(A);
+
+    System.out.print(Arrays.toString(sortedA));
+}
+
+public int[] InsertSort(int[] numArray){
+    //start from the second element,
+    // because the very first element forms a sorted sequence
+    for (int i=1;i&lt;numArray.length;i++){
+        int key=numArray[i];
+        int j=i-1;
+
+        while (j&gt;=0 &amp;&amp; numArray[j]&gt;key){
+            numArray[j+1]=numArray[j];
+            j--;
+        }
+        numArray[j+1]=key;
+    }
+    return numArray;
+}
+</code></pre><p> }</p>
+<p>##################################################<br>&#x7B97;&#x6CD5;&#x5206;&#x6790;&#xFF1A;&#x7EA2;&#x5B57;&#x90E8;&#x5206;&#x5C31;&#x662F;&#x63D2;&#x5165;&#x6392;&#x5E8F;&#x7684;&#x6838;&#x5FC3;&#x90E8;&#x5206;&#xFF0C;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x8FDB;&#x884C;&#x89E3;&#x91CA;&#x3002;<br>1&#x3001;&#x82E5;&#x7B2C;i&#x4E2A;&#x6570;&#x662F;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x63D2;&#x5165;&#x7684;&#xFF0C;&#x53D6;&#x5DF2;&#x6392;&#x597D;&#x5E8F;&#x7684;&#x6570;&#x7EC4;[1, i-1]&#xFF1B;<br>2&#x3001;&#x5728;while&#x5FAA;&#x73AF;&#x5904;&#xFF0C;&#x4F7F;&#x7528;[1,i-1]&#x5185;&#x7684;&#x5143;&#x7D20;j&#x4E0E;i&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x5BF9;&#x6BD4;&#xFF0C;&#x82E5;&#x6BD4;i&#x5143;&#x7D20;&#x5927;&#xFF0C;&#x5219;&#x5411;&#x540E;&#x79FB;&#x52A8;&#x4E00;&#x683C;&#xFF0C;&#x82E5;&#x6BD4;i&#x5143;&#x7D20;&#x5C0F;&#x6216;&#x8005;j&lt;0&#x5219;&#x9000;&#x51FA;&#x5FAA;&#x73AF;&#xFF1B;<br>3&#x3001;&#x7531;&#x4E8E;&#x9000;&#x51FA;&#x5FAA;&#x73AF;&#x7684;&#x6761;&#x4EF6;&#x662F;j&#x5143;&#x7D20;&#x5C0F;&#x4E8E;i&#x5143;&#x7D20;&#xFF0C;&#x6545;j&#x5143;&#x7D20;&#x5C31;&#x662F;&#x7B2C;&#x4E00;&#x4E2A;&#x6BD4;i&#x5143;&#x7D20;&#x5C0F;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x5219;i&#x5143;&#x7D20;&#x5E94;&#x8BE5;&#x653E;&#x5728;j+1&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x4E3A;&#x4EC0;&#x4E48;&#xFF1F;&#x56E0;&#x4E3A;&#x539F;&#x672C;&#x7684;j+1&#x5143;&#x7D20;&#x6BD4;i&#x5143;&#x7D20;&#x5927;&#xFF0C;&#x5DF2;&#x7ECF;&#x5411;&#x540E;&#x590D;&#x5236;&#x4E86;&#x4E00;&#x4E2A;&#xFF0C;&#x6545;&#x6B64;&#x65F6;&#x6570;&#x7EC4;&#x5185;&#x6709;&#x4E24;&#x4E2A;&#x539F;j+1&#x5143;&#x7D20;&#xFF0C;&#x76F4;&#x63A5;&#x5C06;i&#x5143;&#x7D20;&#x653E;&#x5165;j+1&#x4F4D;&#x7F6E;&#xFF0C;&#x6B63;&#x597D;&#x53EF;&#x4EE5;&#x53BB;&#x6389;&#x91CD;&#x590D;&#x7684;j+1&#x5143;&#x7D20;&#x3002;&#x540C;&#x65F6;&#x8003;&#x8651;&#x8FB9;&#x754C;&#x60C5;&#x51B5;&#xFF1A;j&lt;0&#xFF0C;&#x5982;&#x679C;j&lt;0&#x65F6;&#x9000;&#x51FA;&#x4E86;while&#x5FAA;&#x73AF;&#xFF0C;&#x8BF4;&#x660E;&#x6570;&#x7EC4;&#x5185;&#x7684;&#x7B2C;0&#x4E2A;&#x5143;&#x7D20;&#x90FD;&#x6BD4;i&#x5143;&#x7D20;&#x5927;&#xFF0C;&#x6B64;&#x65F6;0&#x5143;&#x7D20;&#x5DF2;&#x7ECF;&#x88AB;&#x590D;&#x5236;&#x5230;1&#x4F4D;&#x7F6E;&#xFF0C;&#x53C8;&#x7531;&#x4E8E;j&lt;0&#x9000;&#x51FA;while&#x5FAA;&#x73AF;&#x65F6;&#x5FC5;&#x5B9A;&#x662F;j=-1&#xFF0C;&#x6240;&#x4EE5;&#x6B64;&#x65F6;&#x7684;j+1&#x4F4D;&#x7F6E;&#x5C31;&#x662F;0&#x4F4D;&#x7F6E;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x653E;&#x5165;i&#x5143;&#x7D20;&#xFF0C;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x8D8A;&#x754C;&#x3002;</p>
+<p>##################################################</p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://yoursite.com/2016/12/25/算法导论 chp2（排序算法）/" data-id="cix4q71q8000fociupjgbgw0o" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://yoursite.com/2016/12/25/算法导论 chp2（排序算法）/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/12/25/算法导论 chp2（排序算法）/">评论</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2016/10/30/Web学习（四）JSP中的内置对象/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">Web学习（四）JSP中的内置对象</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+</section>
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">最新文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/12/25/算法导论 chp2（排序算法）/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://ww3.sinaimg.cn/mw690/b07774eejw1fb3dxc6ea8j204a064aa0.jpg)" alt="算法导论 chp2（排序算法）" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/算法/">算法</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/算法/算法入门/">算法入门</a></p>
+                            <p class="item-title"><a href="/2016/12/25/算法导论 chp2（排序算法）/" class="title">算法导论 chp2（排序算法）</a></p>
+                            <p class="item-date"><time datetime="2016-12-25T13:55:47.000Z" itemprop="datePublished">2016-12-25</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/10/30/Web学习（四）JSP中的内置对象/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2016/10/30/Web学习（四）JSP中的内置对象/" class="title">Web学习（四）JSP中的内置对象</a></p>
+                            <p class="item-date"><time datetime="2016-10-30T03:09:56.000Z" itemprop="datePublished">2016-10-30</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/10/30/Web学习（三）JSP基本语法/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://udemy-images.udemy.com/course/750x422/23742_3580_8.jpg)" alt="Web学习（三）JSP基本语法" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/java/">java</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/java/学习/">学习</a></p>
+                            <p class="item-title"><a href="/2016/10/30/Web学习（三）JSP基本语法/" class="title">Web学习（三）JSP基本语法</a></p>
+                            <p class="item-date"><time datetime="2016-10-30T02:56:37.000Z" itemprop="datePublished">2016-10-30</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/10/30/Web学习（二）javascript知识积累/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://udemy-images.udemy.com/course/750x422/23742_3580_8.jpg)" alt="Web学习（二）javascript知识积累" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/java/">java</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/java/学习/">学习</a></p>
+                            <p class="item-title"><a href="/2016/10/30/Web学习（二）javascript知识积累/" class="title">Web学习（二）javascript知识积累</a></p>
+                            <p class="item-date"><time datetime="2016-10-30T02:51:40.000Z" itemprop="datePublished">2016-10-30</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/10/30/Web学习（一）环境配置/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://udemy-images.udemy.com/course/750x422/23742_3580_8.jpg)" alt="Web学习（一）环境配置" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/java/">java</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/java/学习/">学习</a></p>
+                            <p class="item-title"><a href="/2016/10/30/Web学习（一）环境配置/" class="title">Web学习（一）环境配置</a></p>
+                            <p class="item-date"><time datetime="2016-10-30T02:47:03.000Z" itemprop="datePublished">2016-10-30</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">分类</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/java/学习/">学习</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/java/学习/Spring-Boot/">Spring-Boot</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/学习/java从入门到精通/">java从入门到精通</a><span class="category-list-count">4</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/python/项目记录/">项目记录</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/python/项目记录/python-web/">python web</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/项目记录/爬虫/">爬虫</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/机器学习/">机器学习</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/机器学习/吴恩达课程/">吴恩达课程</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/机器学习/周志华/">周志华</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/算法/算法入门/">算法入门</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/">读书笔记</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/集体智慧编程/">集体智慧编程</a><span class="category-list-count">3</span></li></ul></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">4</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">标签</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java-web/">java-web</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python-web/">python web</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习笔记/">学习笔记</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据挖掘十大算法/">数据挖掘十大算法</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/机器学习/">机器学习</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/爬虫/">爬虫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法/">算法</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络课程/">网络课程</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/读书笔记/">读书笔记</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/项目/">项目</a><span class="tag-list-count">5</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/java/" style="font-size: 16px;">java</a> <a href="/tags/java-web/" style="font-size: 16px;">java-web</a> <a href="/tags/python/" style="font-size: 16px;">python</a> <a href="/tags/python-web/" style="font-size: 14px;">python web</a> <a href="/tags/学习笔记/" style="font-size: 12px;">学习笔记</a> <a href="/tags/数据挖掘十大算法/" style="font-size: 12px;">数据挖掘十大算法</a> <a href="/tags/机器学习/" style="font-size: 20px;">机器学习</a> <a href="/tags/爬虫/" style="font-size: 10px;">爬虫</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/网络课程/" style="font-size: 12px;">网络课程</a> <a href="/tags/读书笔记/" style="font-size: 18px;">读书笔记</a> <a href="/tags/项目/" style="font-size: 16px;">项目</a>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">链接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2016 macwu<br>
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_config = function () {
+        
+            this.page.url = 'http://yoursite.com/2016/12/25/算法导论 chp2（排序算法）/';
+        
+        this.page.identifier = '算法导论 chp2（排序算法）';
+    };
+    (function() { 
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'hexo-theme-icarus' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+
+
+    
+        <script src="/vendor/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js" type="text/javascript"></script>
+
+    </div>
+</body>
+</html>
