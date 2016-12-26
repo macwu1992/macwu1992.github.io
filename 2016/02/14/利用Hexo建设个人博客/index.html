@@ -1,257 +1,333 @@
 <!DOCTYPE html>
-<html lang=zh>
-<head>
+<html>
+    <head>
+    <!-- Title -->
+    
+    <title>
+        利用Hexo建设个人博客 | 沙上有印
+    </title>
+    
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+    
+    <!-- Meta & INfo -->
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="macwu">
+    <meta name="description" content="沙上有印&#39;s blog">
+    <meta name="keywords" content="null">
     
-    <title>利用Hexo建设个人博客 | 沙上有印</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="&amp;#x3000;&amp;#x3000;&amp;#x8BB0;&amp;#x5F97;&amp;#x5C0F;&amp;#x5B66;&amp;#x7684;&amp;#x8BFE;&amp;#x7A0B;&amp;#x4F5C;&amp;#x4E1A;&amp;#x91CC;&amp;#xFF0C;&amp;#x6700;&amp;#x4E0D;&amp;#x559C;&amp;#x6B22;&amp;#x7684;&amp;#x7684;&amp;#x5C31;&amp;#x662F;&amp;#x5199;&amp;#x65E5;&amp;#x8BB0;&amp;#x3002;">
-<meta property="og:type" content="article">
-<meta property="og:title" content="利用Hexo建设个人博客">
-<meta property="og:url" content="http://yoursite.com/2016/02/14/利用Hexo建设个人博客/index.html">
-<meta property="og:site_name" content="沙上有印">
-<meta property="og:description" content="&amp;#x3000;&amp;#x3000;&amp;#x8BB0;&amp;#x5F97;&amp;#x5C0F;&amp;#x5B66;&amp;#x7684;&amp;#x8BFE;&amp;#x7A0B;&amp;#x4F5C;&amp;#x4E1A;&amp;#x91CC;&amp;#xFF0C;&amp;#x6700;&amp;#x4E0D;&amp;#x559C;&amp;#x6B22;&amp;#x7684;&amp;#x7684;&amp;#x5C31;&amp;#x662F;&amp;#x5199;&amp;#x65E5;&amp;#x8BB0;&amp;#x3002;">
-<meta property="og:image" content="http://upload.chinaz.com/2015/1016/1444964380585.png">
-<meta property="og:updated_time" content="2016-08-16T07:39:38.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="利用Hexo建设个人博客">
-<meta name="twitter:description" content="&amp;#x3000;&amp;#x3000;&amp;#x8BB0;&amp;#x5F97;&amp;#x5C0F;&amp;#x5B66;&amp;#x7684;&amp;#x8BFE;&amp;#x7A0B;&amp;#x4F5C;&amp;#x4E1A;&amp;#x91CC;&amp;#xFF0C;&amp;#x6700;&amp;#x4E0D;&amp;#x559C;&amp;#x6B22;&amp;#x7684;&amp;#x7684;&amp;#x5C31;&amp;#x662F;&amp;#x5199;&amp;#x65E5;&amp;#x8BB0;&amp;#x3002;">
+    <!--iOS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
     
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="沙上有印">
+    
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://yoursite.com">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="利用Hexo建设个人博客 | 沙上有印">
+    <meta property="og:description" content="沙上有印&#39;s blog">
+    
+     <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+        
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+    
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="/css/material.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.min.css" type="text/css">
+    <!-- Config CSS -->
 
-    
-        <link rel="alternate" href="/" title="沙上有印" type="application/atom+xml" />
-    
 
+<!-- Other Styles -->
+<style>
+	body, html{
+		font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+	}
+	
+    a{
+        color: #00838F
+    }
     
-        <link rel="icon" href="/img/favicon.ico" />
+    .mdl-card__media,
+    #search-label,
+    #search-form-label:after,
+    #scheme-Paradox .hot_tags-count,
+    #scheme-Paradox .sidebar_archives-count,
+    #scheme-Paradox .sidebar-colored .sidebar-header,
+    #scheme-Paradox .sidebar-colored .sidebar-badge{
+        background-color: #0097A7 !important
+    }
     
+	/* Sidebar User Drop Down Menu Text Color */
+	#scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+    #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus{
+        color: #0097A7 !important
+    }
+    
+    #post_entry-right-info,
+    .sidebar-colored .sidebar-nav li:hover > a,
+    .sidebar-colored .sidebar-nav li:hover > a i,
+    .sidebar-colored .sidebar-nav li > a:hover,
+    .sidebar-colored .sidebar-nav li > a:hover i,
+    .sidebar-colored .sidebar-nav li > a:focus i,
+    .sidebar-colored .sidebar-nav > .open > a,
+    .sidebar-colored .sidebar-nav > .open > a:hover,
+    .sidebar-colored .sidebar-nav > .open > a:focus,
+    #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a{
+        color: #0097A7 !important
+    }
+    
+    .toTop{
+        background: #757575 !important
+    }
+		
+	.material-layout .material-post>.material-nav,
+	.material-layout .material-index>.material-nav,
+	.material-nav a{
+		color: #757575;
+	}
+		
+	#scheme-Paradox .MD-burger-layer {
+		background-color: #757575;
+	}
 
-    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="/vendor/open-sans/styles.css" type="text/css">
-    <link rel="stylesheet" href="/vendor/source-code-pro/styles.css" type="text/css">
+	#scheme-Paradox #post-toc-trigger-btn{
+		color: #757575;
+	}
+	
+	.post-toc a:hover{
+		color: #00838F;
+		text-decoration: underline;
+	}
+</style>
 
-    <link rel="stylesheet" href="/css/style.css" type="text/css">
 
-    <script src="/vendor/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
-    
-    
-        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css" type="text/css">
-    
-    
-    
-    
+<!-- Theme Background Related-->
 
+    <style>
+        body{
+            background-color: #F5F5F5
+        }
+		
+		/* blog_info bottom background */
+        #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+            background-color: #fff;
+        }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+        .fade {
+            transition: all 800ms linear;
+            -webkit-transform: translate3d(0,0,0);
+            -moz-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            -o-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            opacity: 1;
+        }
+
+        .fade.out{
+            opacity: 0;
+        }
+    </style>
+
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+	
+	<link rel="stylesheet" href="/css/highlight/solarized-white.css" type="text/css">
+	
+	<!-- UC Browser Compatible-->
+	<script>
+		var agent = navigator.userAgent.toLowerCase();
+		if(agent.indexOf('ucbrowser')>0) {
+			document.write('<link rel="stylesheet" href="/css/uc.css" type="text/css">');
+		   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+		}
+	</script>
+    
+    <!-- Custom Head -->
+    
 </head>
+	
+	
 
-<body>
-    <div id="container">
-        <header id="header">
-    <div id="header-main" class="header-inner">
-        <div class="outer">
-            <a href="/" id="logo">
-                <i class="logo"></i>
-                <span class="site-title">沙上有印</span>
-            </a>
-            <nav id="main-nav">
-                
-                    <a class="main-nav-link" href="/.">首页</a>
-                
-                    <a class="main-nav-link" href="/archives">存档</a>
-                
-                    <a class="main-nav-link" href="/categories">分类</a>
-                
-                    <a class="main-nav-link" href="/tags">标签</a>
-                
-                    <a class="main-nav-link" href="/about">关于</a>
-                
-            </nav>
-            
-                
-                <nav id="sub-nav">
-                    <div class="profile" id="profile-nav">
-                        <a id="profile-anchor" href="javascript:;">
-                            <img class="avatar" src="/css/images/avatar.png" />
-                            <i class="fa fa-caret-down"></i>
-                        </a>
-                    </div>
-                </nav>
-            
-            <div id="search-form-wrap">
+    <body id="scheme-Paradox">
 
-    <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
-        <button type="submit" class="search-form-submit"></button>
-    </form>
-    <div class="ins-search">
-    <div class="ins-search-mask"></div>
-    <div class="ins-search-container">
-        <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
-            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
-        </div>
-        <div class="ins-section-wrapper">
-            <div class="ins-section-container"></div>
-        </div>
-    </div>
-</div>
-<script>
-(function (window) {
-    var INSIGHT_CONFIG = {
-        TRANSLATION: {
-            POSTS: '文章',
-            PAGES: '页面',
-            CATEGORIES: '分类',
-            TAGS: '标签',
-            UNTITLED: '(未命名)',
-        },
-        ROOT_URL: '/',
-        CONTENT_URL: '/content.json',
-    };
-    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
-})(window);
-</script>
-<script src="/js/insight.js" type="text/javascript"></script>
+		
+        <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+				
+			
+			
+            <!-- Main Container -->
+            <main class="material-layout__content" id="main">
+				
+                <!-- Top Anchor -->
+                <div id="top"></div>
+				
+				
+                <!-- Hamburger Button -->
+                <button class="MD-burger-icon sidebar-toggle">
+                    <span class="MD-burger-layer"></span>
+                </button>
+				
+				
+                <!-- Post TOC -->
 
-</div>
-        </div>
-    </div>
-    <div id="main-nav-mobile" class="header-sub header-inner">
-        <table class="menu outer">
-            <tr>
-                
-                    <td><a class="main-nav-link" href="/.">首页</a></td>
-                
-                    <td><a class="main-nav-link" href="/archives">存档</a></td>
-                
-                    <td><a class="main-nav-link" href="/categories">分类</a></td>
-                
-                    <td><a class="main-nav-link" href="/tags">标签</a></td>
-                
-                    <td><a class="main-nav-link" href="/about">关于</a></td>
-                
-                <td>
-                    
-    <div class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
-    </div>
-
-                </td>
-            </tr>
-        </table>
-    </div>
-</header>
-
-        <div class="outer">
-            
-                
-
-<aside id="profile">
-    <div class="inner profile-inner">
-        <div class="base-info profile-block">
-            <img id="avatar" src="/css/images/avatar.png" />
-            <h2 id="name">macwu</h2>
-            <h3 id="title">Softwre Developer &amp; Data Miner</h3>
-            <span id="location"><i class="fa fa-map-marker"></i>Shanghai, China</span>
-            <a id="follow" target="_blank" href="https://github.com/macwu1992/">关注我</a>
-        </div>
-        <div class="article-info profile-block">
-            <div class="article-info-block">
-                20
-                <span>文章</span>
-            </div>
-            <div class="article-info-block">
-                14
-                <span>标签</span>
-            </div>
-        </div>
-        
-        <div class="profile-block social-links">
-            <table>
-                <tr>
-                    
-                    
-                    <td>
-                        <a href="http://github.com/macwu1992" target="_blank" title="github" class=tooltip>
-                            <i class="fa fa-github"></i>
-                        </a>
-                    </td>
-                    
-                    <td>
-                        <a href="/" target="_blank" title="twitter" class=tooltip>
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                    </td>
-                    
-                    <td>
-                        <a href="http://www.facebook.com/macwu1992/" target="_blank" title="facebook" class=tooltip>
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                    </td>
-                    
-                    <td>
-                        <a href="/" target="_blank" title="dribbble" class=tooltip>
-                            <i class="fa fa-dribbble"></i>
-                        </a>
-                    </td>
-                    
-                    <td>
-                        <a href="/" target="_blank" title="rss" class=tooltip>
-                            <i class="fa fa-rss"></i>
-                        </a>
-                    </td>
-                    
-                </tr>
-            </table>
-        </div>
-        
-    </div>
-</aside>
-
-            
-            <section id="main"><article id="post-利用Hexo建设个人博客" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-        
-            <header class="article-header">
-                
     
-        <h1 class="article-title" itemprop="name">
+	<!-- Back Button -->
+<!--
+	<div class="material-back" id="backhome-div" tabindex="0">
+		<a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="#" onclick="window.history.back();return false;" target="_self" role="button" data-upgraded=",MaterialButton,MaterialRipple">
+			<i class="material-icons" role="presentation">arrow_back</i>
+			<span class="mdl-button__ripple-container">
+				<span class="mdl-ripple"></span>
+			</span>
+		</a>
+	</div>			
+-->
+	<!-- Left aligned menu below button -->
+	<button id="post-toc-trigger-btn"
+			class="mdl-button mdl-js-button mdl-button--icon">
+	  <i class="material-icons">format_list_numbered</i>
+	</button>
+
+	<ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+		for="post-toc-trigger-btn">
+			
+			<ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Hexo_on_Git"><span class="post-toc-number">1.</span> <span class="post-toc-text">Hexo on Git  </span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Hexo_u7684_u5B89_u88C5"><span class="post-toc-number">2.</span> <span class="post-toc-text">Hexo的安装</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Hexo_u7684_u90E8_u7F72"><span class="post-toc-number">3.</span> <span class="post-toc-text">Hexo的部署</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Hexo_u4E3B_u9898_u7684_u5B89_u88C5_u53CA_u4E2A_u6027_u5316"><span class="post-toc-number">4.</span> <span class="post-toc-text">Hexo主题的安装及个性化</span></a></li></ol>
+		
+<!--			<li class="mdl-menu__item">Some Action</li>-->
+	</ul>
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+		
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+	<!-- Paradox Post Header -->
+	
+		<!-- Custom Thumbnail -->
+		<div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(http://upload.chinaz.com/2015/1016/1444964380585.png)">
+	
+        <p class="article-headline-p">
             利用Hexo建设个人博客
-        </h1>
+        </p>
+    </div>
+
+	
+
+				
+				
+					<!-- Paradox Post Info -->
+					<div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+    
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>macwu</strong>
+        <span>2月 14, 2016</span>
+    </div>
+    
+    <div class="section-spacer"></div>
+	
+    <!-- Favorite -->
+<!--
+    <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+        <i class="material-icons" role="presentation">favorite</i>
+        <span class="visuallyhidden">favorites</span>
+    </button>
+-->
+    
+    <!-- Tags (bookmark) -->
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/git/">git</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/hexo/">hexo</a>
+    </ul>
+    
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+
     
 
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2016/02/14/利用Hexo建设个人博客/">
-            <time datetime="2016-02-14T07:51:00.000Z" itemprop="datePublished">2016-02-14</time>
-        </a>
-    </div>
+    
 
+    <!-- Share Twitter -->
+    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=利用Hexo建设个人博客&url=http://yoursite.com//2016/02/14/利用Hexo建设个人博客/index.html&via=macwu" target="_blank">
+        <li class="mdl-menu__item">
+            分享到 Twitter
+        </li>
+    </a>
 
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/hexo/">hexo</a>
-    </div>
+    <!-- Share Google+ -->
+    <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com//2016/02/14/利用Hexo建设个人博客/index.html" target="_blank">
+        <li class="mdl-menu__item">
+            分享到 Google+
+        </li>
+    </a>
 
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/git/">git</a>, <a class="tag-link" href="/tags/hexo/">hexo</a>
-    </div>
+    <!-- Share Weibo -->
+    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=利用Hexo建设个人博客&url=http://yoursite.com//2016/02/14/利用Hexo建设个人博客/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <li class="mdl-menu__item">
+            分享到微博
+        </li>
+    </a>
 
-                    </div>
-                
-            </header>
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <p>&#x3000;&#x3000;&#x8BB0;&#x5F97;&#x5C0F;&#x5B66;&#x7684;&#x8BFE;&#x7A0B;&#x4F5C;&#x4E1A;&#x91CC;&#xFF0C;&#x6700;&#x4E0D;&#x559C;&#x6B22;&#x7684;&#x7684;&#x5C31;&#x662F;&#x5199;&#x65E5;&#x8BB0;&#x3002;&#x4E00;&#x662F;&#x89C9;&#x5F97;&#x6BCF;&#x5929;&#x7684;&#x751F;&#x6D3B;&#x90FD;&#x4E00;&#x6837;&#xFF0C;&#x771F;&#x4E0D;&#x77E5;&#x9053;&#x6D41;&#x6C34;&#x8D26;&#x6709;&#x4EC0;&#x4E48;&#x597D;&#x8BB0;&#x7684;&#xFF0C;&#x4E8C;&#x662F;&#x89C9;&#x5F97;&#x5199;&#x65E5;&#x8BB0;&#x5F88;&#x70E6;&#xFF0C;&#x6CA1;&#x4EC0;&#x4E48;&#x7528;&#x3002;&#x73B0;&#x5728;&#x60F3;&#x60F3;&#xFF0C;&#x4E5F;&#x8BB8;&#x5F53;&#x65F6;&#x662F;&#x8BA8;&#x538C;&#x62FF;&#x8D77;&#x7B14;&#xFF0C;&#x6BD5;&#x7ADF;&#x6211;&#x73B0;&#x5728;&#x7528;&#x952E;&#x76D8;&#x5199;&#x7740;&#x4E1C;&#x897F;&#x89C9;&#x5F97;&#x633A;&#x8212;&#x670D;&#x7684;&#x3002;&#x4E00;&#x8DEF;&#x4ECE;&#x5B66;&#x751F;&#x65F6;&#x4EE3;&#x8D70;&#x8FC7;&#x6765;&#xFF0C;&#x5230;&#x73B0;&#x5728;&#x7684;&#x7814;&#x7A76;&#x751F;&#x9636;&#x6BB5;&#xFF0C;&#x8D8A;&#x8D70;&#x8D8A;&#x89C9;&#x5F97;&#x8BB0;&#x5F55;&#x662F;&#x4E2A;&#x597D;&#x4E60;&#x60EF;&#xFF0C;&#x4E0D;&#x8BBA;&#x662F;&#x5BF9;&#x4E8E;&#x5B66;&#x4E60;&#x3001;&#x5DE5;&#x4F5C;&#x8FD8;&#x662F;&#x751F;&#x6D3B;&#xFF0C;&#x5BF9;&#x4E8E;&#x6211;&#x8FD9;&#x4E2A;&#x65E2;&#x61D2;&#x60F0;&#x53C8;&#x6709;&#x5F52;&#x7EB3;&#x7656;&#x7684;&#x4EBA;&#x6765;&#x8BF4;&#xFF0C;&#x628A;&#x4E00;&#x4E9B;&#x4E8B;&#x60C5;&#xFF0C;&#x505A;&#x4E8B;&#x7684;&#x8FC7;&#x7A0B;&#x8BB0;&#x5F55;&#x4E0B;&#x6765;&#xFF0C;&#x4E43;&#x81F3;&#x6BCF;&#x4E00;&#x4E2A;&#x6B65;&#x9AA4;&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x8BA9;&#x5B9D;&#x8D35;&#x7684;&#x8111;&#x5BB9;&#x91CF;&#x8F7B;&#x677E;&#x4E00;&#x4E9B;&#x3002;&#xFF08;&#x4E5F;&#x8BB8;&#x662F;&#x7F18;&#x4E8E;&#x5C0F;&#x65F6;&#x5019;&#x767E;&#x770B;&#x4E0D;&#x538C;&#x7684;&#x9C81;&#x6EE8;&#x900A;&#x6F02;&#x6D41;&#x8BB0;&#xFF09;&#x1F600;<br>&#x3000;&#x3000;&#x90A3;&#x4E48;&#x5C31;&#x4ECE;&#x642D;&#x5EFA;&#x6211;&#x81EA;&#x5DF1;&#x7684;&#x535A;&#x5BA2;&#x5F00;&#x59CB;&#x5427;&#x3002;&#x3002;&#x3002;<br><a id="more"></a> </p>
+    <!-- Share LinkedIn -->
+    <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com//2016/02/14/利用Hexo建设个人博客/index.html&title=利用Hexo建设个人博客" target="_blank">
+        <li class="mdl-menu__item">
+            分享到 LinkedIn
+        </li>
+    </a>
+</ul>
+
+</div>
+				
+
+                <!-- Post Content -->
+                <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+	
+		<p>&#x3000;&#x3000;&#x8BB0;&#x5F97;&#x5C0F;&#x5B66;&#x7684;&#x8BFE;&#x7A0B;&#x4F5C;&#x4E1A;&#x91CC;&#xFF0C;&#x6700;&#x4E0D;&#x559C;&#x6B22;&#x7684;&#x7684;&#x5C31;&#x662F;&#x5199;&#x65E5;&#x8BB0;&#x3002;&#x4E00;&#x662F;&#x89C9;&#x5F97;&#x6BCF;&#x5929;&#x7684;&#x751F;&#x6D3B;&#x90FD;&#x4E00;&#x6837;&#xFF0C;&#x771F;&#x4E0D;&#x77E5;&#x9053;&#x6D41;&#x6C34;&#x8D26;&#x6709;&#x4EC0;&#x4E48;&#x597D;&#x8BB0;&#x7684;&#xFF0C;&#x4E8C;&#x662F;&#x89C9;&#x5F97;&#x5199;&#x65E5;&#x8BB0;&#x5F88;&#x70E6;&#xFF0C;&#x6CA1;&#x4EC0;&#x4E48;&#x7528;&#x3002;&#x73B0;&#x5728;&#x60F3;&#x60F3;&#xFF0C;&#x4E5F;&#x8BB8;&#x5F53;&#x65F6;&#x662F;&#x8BA8;&#x538C;&#x62FF;&#x8D77;&#x7B14;&#xFF0C;&#x6BD5;&#x7ADF;&#x6211;&#x73B0;&#x5728;&#x7528;&#x952E;&#x76D8;&#x5199;&#x7740;&#x4E1C;&#x897F;&#x89C9;&#x5F97;&#x633A;&#x8212;&#x670D;&#x7684;&#x3002;&#x4E00;&#x8DEF;&#x4ECE;&#x5B66;&#x751F;&#x65F6;&#x4EE3;&#x8D70;&#x8FC7;&#x6765;&#xFF0C;&#x5230;&#x73B0;&#x5728;&#x7684;&#x7814;&#x7A76;&#x751F;&#x9636;&#x6BB5;&#xFF0C;&#x8D8A;&#x8D70;&#x8D8A;&#x89C9;&#x5F97;&#x8BB0;&#x5F55;&#x662F;&#x4E2A;&#x597D;&#x4E60;&#x60EF;&#xFF0C;&#x4E0D;&#x8BBA;&#x662F;&#x5BF9;&#x4E8E;&#x5B66;&#x4E60;&#x3001;&#x5DE5;&#x4F5C;&#x8FD8;&#x662F;&#x751F;&#x6D3B;&#xFF0C;&#x5BF9;&#x4E8E;&#x6211;&#x8FD9;&#x4E2A;&#x65E2;&#x61D2;&#x60F0;&#x53C8;&#x6709;&#x5F52;&#x7EB3;&#x7656;&#x7684;&#x4EBA;&#x6765;&#x8BF4;&#xFF0C;&#x628A;&#x4E00;&#x4E9B;&#x4E8B;&#x60C5;&#xFF0C;&#x505A;&#x4E8B;&#x7684;&#x8FC7;&#x7A0B;&#x8BB0;&#x5F55;&#x4E0B;&#x6765;&#xFF0C;&#x4E43;&#x81F3;&#x6BCF;&#x4E00;&#x4E2A;&#x6B65;&#x9AA4;&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x8BA9;&#x5B9D;&#x8D35;&#x7684;&#x8111;&#x5BB9;&#x91CF;&#x8F7B;&#x677E;&#x4E00;&#x4E9B;&#x3002;&#xFF08;&#x4E5F;&#x8BB8;&#x662F;&#x7F18;&#x4E8E;&#x5C0F;&#x65F6;&#x5019;&#x767E;&#x770B;&#x4E0D;&#x538C;&#x7684;&#x9C81;&#x6EE8;&#x900A;&#x6F02;&#x6D41;&#x8BB0;&#xFF09;&#x1F600;<br>&#x3000;&#x3000;&#x90A3;&#x4E48;&#x5C31;&#x4ECE;&#x642D;&#x5EFA;&#x6211;&#x81EA;&#x5DF1;&#x7684;&#x535A;&#x5BA2;&#x5F00;&#x59CB;&#x5427;&#x3002;&#x3002;&#x3002;<br><a id="more"></a> </p>
 <h2 id="Hexo_on_Git"><a href="#Hexo_on_Git" class="headerlink" title="Hexo on Git"></a>Hexo on Git  </h2><p>&#x3000;&#x3000;Hexo&#x662F;&#x4E00;&#x6B3E;&#x8F7B;&#x91CF;&#x7EA7;&#x7684;&#x535A;&#x5BA2;&#x751F;&#x6210;&#x7CFB;&#x7EDF;&#xFF08;&#x6211;&#x81EA;&#x5DF1;&#x7684;&#x6982;&#x5FF5;&#xFF09;&#xFF0C;&#x65E2;&#x53EF;&#x4EE5;&#x5728;&#x672C;&#x5730;&#x9884;&#x89C8;&#x6548;&#x679C;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x90E8;&#x7F72;&#x5230;Github&#x8FD9;&#x79CD;&#x771F;&#x4EBA;&#x5728;&#x7EBF;&#x540C;&#x6027;&#x4EA4;&#x53CB;&#x5E73;&#x53F0;&#x4E0A;&#xFF0C;&#x65E0;&#x5F02;&#x4E8E;&#x4E00;&#x4E2A;&#x5C0F;&#x578B;&#x7684;&#x7F51;&#x7AD9;&#x65E5;&#x8BB0;&#x672C;&#xFF0C;&#x5565;&#x90FD;&#x80FD;&#x8BB0;&#xFF0C;&#x8FD8;&#x80FD;&#x5B9A;&#x5236;&#xFF0C;&#x60F3;&#x60F3;&#x90FD;&#x6709;&#x70B9;&#x5C0F;&#x6FC0;&#x52A8;&#x5462;&#x3002;  </p>
 <p>  &#x5B98;&#x65B9;&#x7F51;&#x7AD9;&#xFF1A;<a href="https://hexo.io/docs/" target="_blank" rel="external">hexo</a>  </p>
 <p>&#x3000;&#x3000;&#x90A3;&#x4E48;&#x642D;&#x5EFA;&#x535A;&#x5BA2;&#x7684;&#x4E3B;&#x8981;&#x6750;&#x6599;&#x5C31;&#x662F;Hexo &#x52A0;&#x4E0A; Github&#x4E86;&#x3002;<br>&#xFF08;&#x4F7F;&#x7528;Gitcafe&#x4E5F;&#x53EF;&#xFF0C;&#x4F46;&#x4EB2;&#x6D4B;Github&#x8F83;&#x4E3A;&#x7A33;&#x5B9A;&#xFF0C;&#x5E76;&#x80FD;&#x5E7F;&#x4EA4;&#x5168;&#x4E16;&#x754C;&#x540C;&#x6027;&#x597D;&#x53CB;&#xFF0C;&#x8D76;&#x7D27;&#x53BB;&#x6CE8;&#x518C;&#x5427;&#xFF5E;&#xFF09;  </p>
@@ -271,321 +347,339 @@
 <p>&#x66F4;&#x4E8E;&#x3002;&#x3002;&#x3002;  </p>
 </blockquote>
 <h2 id="Hexo_u4E3B_u9898_u7684_u5B89_u88C5_u53CA_u4E2A_u6027_u5316"><a href="#Hexo_u4E3B_u9898_u7684_u5B89_u88C5_u53CA_u4E2A_u6027_u5316" class="headerlink" title="Hexo&#x4E3B;&#x9898;&#x7684;&#x5B89;&#x88C5;&#x53CA;&#x4E2A;&#x6027;&#x5316;"></a>Hexo&#x4E3B;&#x9898;&#x7684;&#x5B89;&#x88C5;&#x53CA;&#x4E2A;&#x6027;&#x5316;</h2>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
+	
+	
+	
+	
 </div>
+				
+				
 
-    <a data-url="http://yoursite.com/2016/02/14/利用Hexo建设个人博客/" data-id="cix4rnvpu00000piuqb151zsz" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="http://yoursite.com/2016/02/14/利用Hexo建设个人博客/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/02/14/利用Hexo建设个人博客/">评论</a>
-    
-
-        </footer>
-    </div>
-    
-        
-<nav id="article-nav">
-    
-        <a href="/2016/02/23/《集体智慧编程》-第三章：群组、聚类/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">上一篇</strong>
-            <div class="article-nav-title">
+                <!-- Post Comments -->
                 
-                    《集体智慧编程》-第三章：群组、聚类
+                    
+
+
                 
             </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    
+    <!-- Prev Nav -->
+    
+        <a href="/2016/02/23/《集体智慧编程》-第三章：群组、聚类/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
         </a>
     
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
     
 </nav>
-
-
-    
-</article>
-
-
-    
-    <section id="comments">
-    
-        
-    <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
     </div>
 
-    
-    </section>
+				
+				
+					<!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay "></div>
 
-</section>
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored  sidebar-fixed-left" role="navigation">
+	<div id="sidebar-main">
+	    <!-- Sidebar Header -->
+		<div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+    <i class="material-icons">clear_all</i>
+    <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="macwu's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        youremail@email.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+		<!-- Sidebar Navigation  -->
+		<ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+			
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+						<i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        Email Me
+                    </a>
+                </li>
             
-                <aside id="sidebar">
-   
-        
-    <div class="widget-wrap">
-        <h3 class="widget-title">最新文章</h3>
-        <div class="widget">
-            <ul id="recent-post" class="">
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2016/12/25/算法导论 chp2（排序算法）/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://ww3.sinaimg.cn/mw690/b07774eejw1fb3dxc6ea8j204a064aa0.jpg)" alt="算法导论 chp2（排序算法）" class="thumbnail-image"></span>
-    
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    <li id="sidebar-first-li">
+        <a href="/" target="_self">
+            <i class="material-icons sidebar-material-icons">home</i>
+             主页
+        </a>
+    </li>
+
+    <!-- I'm Feeling Lucky -->
+<!--
+    <li class="dropdown">
+        <a href="" target="_self">
+            <i class="material-icons sidebar-material-icons">explore</i>
+             sidebar.imlucky
+        </a>
+    </li>
+-->
+
+	
+    <!-- Archives  -->
+    <li class="dropdown">
+        <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+            <i class="material-icons sidebar-material-icons">inbox</i>
+             归档
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            <li>
+            <a class="sidebar_archives-link" href="/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">十月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">八月 2016<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/02/">二月 2016<span class="sidebar_archives-count">4</span></a>
+        </ul>
+    </li>
+
+    <!-- Divider -->
+    <li class="divider"></li>
+
+
+    <!-- Pages  -->
+	
+
+    <!-- Article Numebr  -->
+    <li>
+        <a href="/archives">
+             文章总数
+             <span class="sidebar-badge">20</span>
+        </a>
+    </li>
+</ul>
+
+		<!-- Sidebar Divider -->
+		<div class="sidebar-divider"></div>
+
+		<!-- Sidebar Footer -->
+		<!-- 
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持。 :) 
+-->
+
+<!-- Theme Material -->
+<a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+	<div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+		主题 - Material
+		<span class="sidebar-badge badge-circle">i</span>
+	</div>
 </a>
 
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/算法/">算法</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/算法/算法入门/">算法入门</a></p>
-                            <p class="item-title"><a href="/2016/12/25/算法导论 chp2（排序算法）/" class="title">算法导论 chp2（排序算法）</a></p>
-                            <p class="item-date"><time datetime="2016-12-25T13:55:47.000Z" itemprop="datePublished">2016-12-25</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2016/10/30/Web学习（四）JSP中的内置对象/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
+<!-- Help & Support -->
+<!--
+<a href="mailto:hiviosey@gmail.com" class="sidebar-footer-text-a">
+    <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+		sidebar.help
+		<span class="mdl-button__ripple-container">
+			<span class="mdl-ripple"></span>
+		</span>
+	</div>
 </a>
+-->
 
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2016/10/30/Web学习（四）JSP中的内置对象/" class="title">Web学习（四）JSP中的内置对象</a></p>
-                            <p class="item-date"><time datetime="2016-10-30T03:09:56.000Z" itemprop="datePublished">2016-10-30</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2016/10/30/Web学习（三）JSP基本语法/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://udemy-images.udemy.com/course/750x422/23742_3580_8.jpg)" alt="Web学习（三）JSP基本语法" class="thumbnail-image"></span>
-    
+<!-- Feedback -->
+<!--
+<a href="https://github.com/viosey/hexo-theme-material/issues" target="_blank" class="sidebar-footer-text-a">
+    <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+         sidebar.feedback
+                    <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
 </a>
+-->
 
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/java/">java</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/java/学习/">学习</a></p>
-                            <p class="item-title"><a href="/2016/10/30/Web学习（三）JSP基本语法/" class="title">Web学习（三）JSP基本语法</a></p>
-                            <p class="item-date"><time datetime="2016-10-30T02:56:37.000Z" itemprop="datePublished">2016-10-30</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2016/10/30/Web学习（二）javascript知识积累/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://udemy-images.udemy.com/course/750x422/23742_3580_8.jpg)" alt="Web学习（二）javascript知识积累" class="thumbnail-image"></span>
-    
-</a>
+<!-- Abount Theme -->
+<!--
+<a href="https://blog.viosey.com/index.php/Material.html" target="_blank" class="sidebar-footer-text-a">
+    <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+         sidebar.about_theme
+        <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+</a>-->
 
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/java/">java</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/java/学习/">学习</a></p>
-                            <p class="item-title"><a href="/2016/10/30/Web学习（二）javascript知识积累/" class="title">Web学习（二）javascript知识积累</a></p>
-                            <p class="item-date"><time datetime="2016-10-30T02:51:40.000Z" itemprop="datePublished">2016-10-30</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2016/10/30/Web学习（一）环境配置/" class="thumbnail">
+	</div>
     
+    <!-- Sidebar Sponsor -->
     
-        <span style="background-image:url(https://udemy-images.udemy.com/course/750x422/23742_3580_8.jpg)" alt="Web学习（一）环境配置" class="thumbnail-image"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/java/">java</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/java/学习/">学习</a></p>
-                            <p class="item-title"><a href="/2016/10/30/Web学习（一）环境配置/" class="title">Web学习（一）环境配置</a></p>
-                            <p class="item-date"><time datetime="2016-10-30T02:47:03.000Z" itemprop="datePublished">2016-10-30</time></p>
-                        </div>
-                    </li>
-                
-            </ul>
-        </div>
-    </div>
-
-    
-        
-    <div class="widget-wrap">
-        <h3 class="widget-title">分类</h3>
-        <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/java/学习/">学习</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/java/学习/Spring-Boot/">Spring-Boot</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/学习/java从入门到精通/">java从入门到精通</a><span class="category-list-count">4</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/python/项目记录/">项目记录</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/python/项目记录/python-web/">python web</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/项目记录/爬虫/">爬虫</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/机器学习/">机器学习</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/机器学习/吴恩达课程/">吴恩达课程</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/机器学习/周志华/">周志华</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/算法/算法入门/">算法入门</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/">读书笔记</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/集体智慧编程/">集体智慧编程</a><span class="category-list-count">3</span></li></ul></li></ul>
-        </div>
-    </div>
-
-    
-        
-    <div class="widget-wrap">
-        <h3 class="widget-title">归档</h3>
-        <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">4</span></li></ul>
-        </div>
-    </div>
-
-    
-        
-    <div class="widget-wrap">
-        <h3 class="widget-title">标签</h3>
-        <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java-web/">java-web</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python-web/">python web</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习笔记/">学习笔记</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据挖掘十大算法/">数据挖掘十大算法</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/机器学习/">机器学习</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/爬虫/">爬虫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法/">算法</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络课程/">网络课程</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/读书笔记/">读书笔记</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/项目/">项目</a><span class="tag-list-count">5</span></li></ul>
-        </div>
-    </div>
-
-    
-        
-    <div class="widget-wrap">
-        <h3 class="widget-title">标签云</h3>
-        <div class="widget tagcloud">
-            <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/java/" style="font-size: 16px;">java</a> <a href="/tags/java-web/" style="font-size: 16px;">java-web</a> <a href="/tags/python/" style="font-size: 16px;">python</a> <a href="/tags/python-web/" style="font-size: 14px;">python web</a> <a href="/tags/学习笔记/" style="font-size: 12px;">学习笔记</a> <a href="/tags/数据挖掘十大算法/" style="font-size: 12px;">数据挖掘十大算法</a> <a href="/tags/机器学习/" style="font-size: 20px;">机器学习</a> <a href="/tags/爬虫/" style="font-size: 10px;">爬虫</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/网络课程/" style="font-size: 12px;">网络课程</a> <a href="/tags/读书笔记/" style="font-size: 18px;">读书笔记</a> <a href="/tags/项目/" style="font-size: 16px;">项目</a>
-        </div>
-    </div>
-
-    
-        
-    <div class="widget-wrap widget-list">
-        <h3 class="widget-title">链接</h3>
-        <div class="widget">
-            <ul>
-                
-                    <li>
-                        <a href="http://hexo.io">Hexo</a>
-                    </li>
-                
-            </ul>
-        </div>
-    </div>
 
 
-    
-    <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
-            
-        </div>
-        <footer id="footer">
-    <div class="outer">
-        <div id="footer-info" class="inner">
-            &copy; 2016 macwu<br>
-            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
-        </div>
-    </div>
-</footer>
-        
+
+				
+				
+				
+					<!-- Footer Top Button -->
+					<div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+				
+				
+				<!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+	
+	
+		<!-- Paradox Footer Left Section -->
+		<div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
     
-    <script>
-    var disqus_config = function () {
-        
-            this.page.url = 'http://yoursite.com/2016/02/14/利用Hexo建设个人博客/';
-        
-        this.page.identifier = '利用Hexo建设个人博客';
-    };
-    (function() { 
-        var d = document, s = d.createElement('script');  
-        s.src = '//' + 'hexo-theme-icarus' + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
+    <a href="https://twitter.com/twitter" target="view_window"><button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-twitter.png);">
+        <span class="visuallyhidden">Twitter</span>
+    </button></a>
+    
+
+    <!-- Facebook -->
+    
+    <a href="https://www.facebook.com/facebook" target="view_window"><button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-facebook.png);">
+        <span class="visuallyhidden">Facebook</span>
+    </button></a>
+    
+
+    <!-- Google + -->
+    
+    <a href="https://www.google.com/" target="view_window"><button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-gplus.png);">
+        <span class="visuallyhidden">Google Plus</span>
+    </button></a>
+    
+
+    <!-- Weibo -->
+    
+    
+
+    <!-- Instagram -->
+    
+    
+
+    <!-- Tumblr -->
+    
+    
+
+    <!-- Github -->
+    
+    
+
+    <!-- LinkedIn -->
+    
+    
+</div>
+
+
+		<!--Copyright-->
+		<div id="copyright">Copyright&nbsp;©&nbsp;<script type="text/javascript">var fd = new Date();document.write(fd.getFullYear());</script>&nbsp;沙上有印</div>
+
+		<!-- Paradox Footer Right Section -->
+
+		<!-- 
+		I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+		It will not impact the appearance and can give developers a lot of support :)
+
+		很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+		它不会影响美观并可以给开发者很大的支持。 :) 
+		-->
+
+		<div class="mdl-mini-footer--right-section">
+			<div>
+				<div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+				<div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+			</div>
+		</div>
+	
+    
+</footer>
+                
+				<!-- Import File -->
+<script src="/js/highlight.min.js" type="text/javascript"></script>
+<script src="/js/js.min.js" type="text/javascript"></script>
+<script src="/js/nprogress.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    
+    $('#nprogress .bar').css({
+        'background': '#FF4081'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #FF4081, 0 0 15px #FF4081'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#FF4081',
+        'border-left-color': '#FF4081'
+    });
+    
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
 </script>
 
 
 
-    
-        <script src="/vendor/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
-    
 
 
-<!-- Custom Scripts -->
-<script src="/js/main.js" type="text/javascript"></script>
 
-    </div>
-</body>
+
+
+
+
+
+<!-- Swiftye -->
+
+
+<!-- Local Search-->
+
+
+<!-- Window Load-->
+<script>
+    $(window).load(function() {
+        // Post_Toc parent position fixed
+        $(".post-toc-wrap").parent(".mdl-menu__container").css("position", "fixed");
+    });
+</script>
+
+<!-- MathJax Load-->
+
+            </main>
+        </div>
+		
+    </body>
+		
+	
 </html>
