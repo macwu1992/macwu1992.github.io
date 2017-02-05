@@ -1,680 +1,583 @@
 <!DOCTYPE html>
-<html>
-    <head>
-    <!-- Title -->
-    
-    <title>
-        Python web 开发（Q&amp;A） | 沙上有印
-    </title>
-    
-    <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
-    <link rel="icon" sizes="192x192" href="/img/favicon.png">
-    <link rel="apple-touch-icon" href="/img/favicon.png">
-    
-    <!-- Meta & INfo -->
+<html lang=zh>
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#0097A7">
-    <meta name="author" content="macwu">
-    <meta name="description" content="沙上有印&#39;s blog">
-    <meta name="keywords" content="null">
     
-    <!--iOS -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="apple-mobile-web-app-title" content="Title">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="480">
+    <title>Python web 开发（Q&amp;A） | 沙上有印</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Q&amp;#xFF1A;http&amp;#x534F;&amp;#x8BAE;&amp;#x662F;&amp;#x4EC0;&amp;#x4E48;&amp;#xFF0C;&amp;#x5B83;&amp;#x662F;&amp;#x600E;&amp;#x4E48;&amp;#x8FD0;&amp;#x4F5C;&amp;#x7684;&amp;#xFF1F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python web 开发（Q&A）">
+<meta property="og:url" content="http://yoursite.com/2016/08/26/Python-web-开发（Q-A）/index.html">
+<meta property="og:site_name" content="沙上有印">
+<meta property="og:description" content="Q&amp;#xFF1A;http&amp;#x534F;&amp;#x8BAE;&amp;#x662F;&amp;#x4EC0;&amp;#x4E48;&amp;#xFF0C;&amp;#x5B83;&amp;#x662F;&amp;#x600E;&amp;#x4E48;&amp;#x8FD0;&amp;#x4F5C;&amp;#x7684;&amp;#xFF1F;">
+<meta property="og:image" content="http://img.ithome.com/newsuploadfiles/2015/5/20150506_234605_363.jpg">
+<meta property="og:updated_time" content="2016-08-26T04:25:42.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python web 开发（Q&A）">
+<meta name="twitter:description" content="Q&amp;#xFF1A;http&amp;#x534F;&amp;#x8BAE;&amp;#x662F;&amp;#x4EC0;&amp;#x4E48;&amp;#xFF0C;&amp;#x5B83;&amp;#x662F;&amp;#x600E;&amp;#x4E48;&amp;#x8FD0;&amp;#x4F5C;&amp;#x7684;&amp;#xFF1F;">
     
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
+
     
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="沙上有印">
+        <link rel="alternate" href="/" title="沙上有印" type="application/atom+xml" />
     
-    <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com">
-    <meta property="og:type" content="blog">
-    <meta property="og:title" content="Python web 开发（Q&amp;A） | 沙上有印">
-    <meta property="og:description" content="沙上有印&#39;s blog">
+
     
-     <!--[if lte IE 9]>
-        <link rel="stylesheet" href="/css/ie-blocker.css">
-        
-        
-            <script src="/js/ie-blocker.zhCN.js"></script>
-        
-    <![endif]-->
+        <link rel="icon" href="/img/favicon.ico" />
     
-    <!-- Import CSS -->
-    <link rel="stylesheet" href="/css/material.min.css" type="text/css">
-    <link rel="stylesheet" href="/css/style.min.css" type="text/css">
-    <!-- Config CSS -->
 
+    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/vendor/open-sans/styles.css" type="text/css">
+    <link rel="stylesheet" href="/vendor/source-code-pro/styles.css" type="text/css">
 
-<!-- Other Styles -->
-<style>
-	body, html{
-		font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
-	}
-	
-    a{
-        color: #00838F
-    }
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+    <script src="/vendor/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
     
-    .mdl-card__media,
-    #search-label,
-    #search-form-label:after,
-    #scheme-Paradox .hot_tags-count,
-    #scheme-Paradox .sidebar_archives-count,
-    #scheme-Paradox .sidebar-colored .sidebar-header,
-    #scheme-Paradox .sidebar-colored .sidebar-badge{
-        background-color: #0097A7 !important
-    }
     
-	/* Sidebar User Drop Down Menu Text Color */
-	#scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
-    #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus{
-        color: #0097A7 !important
-    }
+        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css" type="text/css">
     
-    #post_entry-right-info,
-    .sidebar-colored .sidebar-nav li:hover > a,
-    .sidebar-colored .sidebar-nav li:hover > a i,
-    .sidebar-colored .sidebar-nav li > a:hover,
-    .sidebar-colored .sidebar-nav li > a:hover i,
-    .sidebar-colored .sidebar-nav li > a:focus i,
-    .sidebar-colored .sidebar-nav > .open > a,
-    .sidebar-colored .sidebar-nav > .open > a:hover,
-    .sidebar-colored .sidebar-nav > .open > a:focus,
-    #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a{
-        color: #0097A7 !important
-    }
     
-    .toTop{
-        background: #757575 !important
-    }
-		
-	.material-layout .material-post>.material-nav,
-	.material-layout .material-index>.material-nav,
-	.material-nav a{
-		color: #757575;
-	}
-		
-	#scheme-Paradox .MD-burger-layer {
-		background-color: #757575;
-	}
-
-	#scheme-Paradox #post-toc-trigger-btn{
-		color: #757575;
-	}
-	
-	.post-toc a:hover{
-		color: #00838F;
-		text-decoration: underline;
-	}
-</style>
-
-
-<!-- Theme Background Related-->
-
-    <style>
-        body{
-            background-color: #F5F5F5
-        }
-		
-		/* blog_info bottom background */
-        #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
-            background-color: #fff;
-        }
-    </style>
-
-
-
-
-<!-- Fade Effect -->
-
-    <style>
-        .fade {
-            transition: all 800ms linear;
-            -webkit-transform: translate3d(0,0,0);
-            -moz-transform: translate3d(0,0,0);
-            -ms-transform: translate3d(0,0,0);
-            -o-transform: translate3d(0,0,0);
-            transform: translate3d(0,0,0);
-            opacity: 1;
-        }
-
-        .fade.out{
-            opacity: 0;
-        }
-    </style>
-
-	<script src="/js/jquery.min.js" type="text/javascript"></script>
-	
-	<link rel="stylesheet" href="/css/highlight/solarized-white.css" type="text/css">
-	
-	<!-- UC Browser Compatible-->
-	<script>
-		var agent = navigator.userAgent.toLowerCase();
-		if(agent.indexOf('ucbrowser')>0) {
-			document.write('<link rel="stylesheet" href="/css/uc.css" type="text/css">');
-		   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
-		}
-	</script>
     
-    <!-- Custom Head -->
     
+
 </head>
-	
-	
 
-    <body id="scheme-Paradox">
-
-		
-        <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
-				
-			
-			
-            <!-- Main Container -->
-            <main class="material-layout__content" id="main">
-				
-                <!-- Top Anchor -->
-                <div id="top"></div>
-				
-				
-                <!-- Hamburger Button -->
-                <button class="MD-burger-icon sidebar-toggle">
-                    <span class="MD-burger-layer"></span>
-                </button>
-				
-				
-                <!-- Post TOC -->
-
-    
-	<!-- Back Button -->
-<!--
-	<div class="material-back" id="backhome-div" tabindex="0">
-		<a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="#" onclick="window.history.back();return false;" target="_self" role="button" data-upgraded=",MaterialButton,MaterialRipple">
-			<i class="material-icons" role="presentation">arrow_back</i>
-			<span class="mdl-button__ripple-container">
-				<span class="mdl-ripple"></span>
-			</span>
-		</a>
-	</div>			
--->
-	<!-- Left aligned menu below button -->
-	<button id="post-toc-trigger-btn"
-			class="mdl-button mdl-js-button mdl-button--icon">
-	  <i class="material-icons">format_list_numbered</i>
-	</button>
-
-	<ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
-		for="post-toc-trigger-btn">
-			
-			
-		
-<!--			<li class="mdl-menu__item">Some Action</li>-->
-	</ul>
-
-
-
-<!-- Layouts -->
-
-    <!-- Post Module -->
-    <div class="material-post_container">
-		
-        <div class="material-post mdl-grid">
-            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
-
-                <!-- Post Header(Thumbnail & Title) -->
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">沙上有印</span>
+            </a>
+            <nav id="main-nav">
                 
-	<!-- Paradox Post Header -->
-	
-		<!-- Custom Thumbnail -->
-		<div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(http://img.ithome.com/newsuploadfiles/2015/5/20150506_234605_363.jpg)">
-	
-        <p class="article-headline-p">
-            Python web 开发（Q&A）
-        </p>
+                    <a class="main-nav-link" href="/.">首页</a>
+                
+                    <a class="main-nav-link" href="/archives">存档</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
+                
+                    <a class="main-nav-link" href="/tags">标签</a>
+                
+                    <a class="main-nav-link" href="/about">关于</a>
+                
+            </nav>
+            
+                
+                <nav id="sub-nav">
+                    <div class="profile" id="profile-nav">
+                        <a id="profile-anchor" href="javascript:;">
+                            <img class="avatar" src="/css/images/avatar.png" />
+                            <i class="fa fa-caret-down"></i>
+                        </a>
+                    </div>
+                </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
     </div>
-
-	
-
-				
-				
-					<!-- Paradox Post Info -->
-					<div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
-    
-    <!-- Author Avatar -->
-    <div id="author-avatar">
-        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
-    </div>
-    <!-- Author Name & Date -->
-    <div>
-        <strong>macwu</strong>
-        <span>8月 26, 2016</span>
-    </div>
-    
-    <div class="section-spacer"></div>
-	
-    <!-- Favorite -->
-<!--
-    <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
-        <i class="material-icons" role="presentation">favorite</i>
-        <span class="visuallyhidden">favorites</span>
-    </button>
--->
-    
-    <!-- Tags (bookmark) -->
-    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-        <i class="material-icons" role="presentation">bookmark</i>
-        <span class="visuallyhidden">bookmark</span>
-    </button>
-    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
-        <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/python/">python</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/python-web/">python web</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/项目/">项目</a>
-    </ul>
-    
-    <!-- Share -->
-    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-    <i class="material-icons" role="presentation">share</i>
-    <span class="visuallyhidden">share</span>
-</button>
-<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
-
-    
-
-    
-
-    <!-- Share Twitter -->
-    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Python web 开发（Q&amp;A）&url=http://yoursite.com//2016/08/26/Python-web-开发（Q-A）/index.html&via=macwu" target="_blank">
-        <li class="mdl-menu__item">
-            分享到 Twitter
-        </li>
-    </a>
-
-    <!-- Share Google+ -->
-    <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com//2016/08/26/Python-web-开发（Q-A）/index.html" target="_blank">
-        <li class="mdl-menu__item">
-            分享到 Google+
-        </li>
-    </a>
-
-    <!-- Share Weibo -->
-    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Python web 开发（Q&amp;A）&url=http://yoursite.com//2016/08/26/Python-web-开发（Q-A）/index.html&pic=&searchPic=false&style=simple" target="_blank">
-        <li class="mdl-menu__item">
-            分享到微博
-        </li>
-    </a>
-
-    <!-- Share LinkedIn -->
-    <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com//2016/08/26/Python-web-开发（Q-A）/index.html&title=Python web 开发（Q&amp;A）" target="_blank">
-        <li class="mdl-menu__item">
-            分享到 LinkedIn
-        </li>
-    </a>
-</ul>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js" type="text/javascript"></script>
 
 </div>
-				
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/.">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">存档</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">关于</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+    </div>
 
-                <!-- Post Content -->
-                <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
-	
-		<p>Q&#xFF1A;http&#x534F;&#x8BAE;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x5B83;&#x662F;&#x600E;&#x4E48;&#x8FD0;&#x4F5C;&#x7684;&#xFF1F;</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+                
+
+<aside id="profile">
+    <div class="inner profile-inner">
+        <div class="base-info profile-block">
+            <img id="avatar" src="/css/images/avatar.png" />
+            <h2 id="name">TonyWu</h2>
+            <h3 id="title">Softwre Developer &amp; Data Miner</h3>
+            <span id="location"><i class="fa fa-map-marker"></i>Shanghai, China</span>
+            <a id="follow" target="_blank" href="https://github.com/macwu1992/">关注我</a>
+        </div>
+        <div class="article-info profile-block">
+            <div class="article-info-block">
+                20
+                <span>文章</span>
+            </div>
+            <div class="article-info-block">
+                14
+                <span>标签</span>
+            </div>
+        </div>
+        
+        <div class="profile-block social-links">
+            <table>
+                <tr>
+                    
+                    
+                    <td>
+                        <a href="http://github.com/macwu1992" target="_blank" title="github" class=tooltip>
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/" target="_blank" title="twitter" class=tooltip>
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="http://www.facebook.com/macwu1992/" target="_blank" title="facebook" class=tooltip>
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/" target="_blank" title="dribbble" class=tooltip>
+                            <i class="fa fa-dribbble"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/" target="_blank" title="rss" class=tooltip>
+                            <i class="fa fa-rss"></i>
+                        </a>
+                    </td>
+                    
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+</aside>
+
+            
+            <section id="main"><article id="post-Python-web-开发（Q-A）" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+            Python web 开发（Q&amp;A）
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2016/08/26/Python-web-开发（Q-A）/">
+            <time datetime="2016-08-26T04:23:24.000Z" itemprop="datePublished">2016-08-26</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/python/">python</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/python/项目记录/">项目记录</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/python/项目记录/python-web/">python web</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/python/">python</a>, <a class="tag-link" href="/tags/python-web/">python web</a>, <a class="tag-link" href="/tags/项目/">项目</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>Q&#xFF1A;http&#x534F;&#x8BAE;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x5B83;&#x662F;&#x600E;&#x4E48;&#x8FD0;&#x4F5C;&#x7684;&#xFF1F;</p>
 <a id="more"></a>
 <p>A&#xFF1A;HTTP(HyperText Transfer Protocol)&#x662F;&#x4E00;&#x5957;&#x8BA1;&#x7B97;&#x673A;&#x901A;&#x8FC7;&#x7F51;&#x7EDC;&#x8FDB;&#x884C;&#x901A;&#x4FE1;&#x7684;&#x89C4;&#x5219;&#x3002;&#x8BA1;&#x7B97;&#x673A;&#x4E13;&#x5BB6;&#x8BBE;&#x8BA1;&#x51FA;HTTP&#xFF0C;&#x4F7F;HTTP&#x5BA2;&#x6237;&#xFF08;&#x5982;Web&#x6D4F;&#x89C8;&#x5668;&#xFF09;&#x80FD;&#x591F;&#x4ECE;HTTP&#x670D;&#x52A1;&#x5668;(Web&#x670D;&#x52A1;&#x5668;)&#x8BF7;&#x6C42;&#x4FE1;&#x606F;&#x548C;&#x670D;&#x52A1;&#xFF0C;HTTP&#x76EE;&#x524D;&#x534F;&#x8BAE;&#x7684;&#x7248;&#x672C;&#x662F;1.1.HTTP&#x662F;&#x4E00;&#x79CD;&#x65E0;&#x72B6;&#x6001;&#x7684;&#x534F;&#x8BAE;&#xFF0C;&#x65E0;&#x72B6;&#x6001;&#x662F;&#x6307;Web&#x6D4F;&#x89C8;&#x5668;&#x548C;Web&#x670D;&#x52A1;&#x5668;&#x4E4B;&#x95F4;&#x4E0D;&#x9700;&#x8981;&#x5EFA;&#x7ACB;&#x6301;&#x4E45;&#x7684;&#x8FDE;&#x63A5;&#xFF0C;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x5F53;&#x4E00;&#x4E2A;&#x5BA2;&#x6237;&#x7AEF;&#x5411;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x53D1;&#x51FA;&#x8BF7;&#x6C42;&#xFF0C;&#x7136;&#x540E;Web&#x670D;&#x52A1;&#x5668;&#x8FD4;&#x56DE;&#x54CD;&#x5E94;(response)&#xFF0C;&#x8FDE;&#x63A5;&#x5C31;&#x88AB;&#x5173;&#x95ED;&#x4E86;&#xFF0C;&#x5728;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x4E0D;&#x4FDD;&#x7559;&#x8FDE;&#x63A5;&#x7684;&#x6709;&#x5173;&#x4FE1;&#x606F;.HTTP&#x9075;&#x5FAA;&#x8BF7;&#x6C42;(Request)/&#x5E94;&#x7B54;(Response)&#x6A21;&#x578B;&#x3002;Web&#x6D4F;&#x89C8;&#x5668;&#x5411;Web&#x670D;&#x52A1;&#x5668;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#xFF0C;Web&#x670D;&#x52A1;&#x5668;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x5E76;&#x8FD4;&#x56DE;&#x9002;&#x5F53;&#x7684;&#x5E94;&#x7B54;&#x3002;&#x6240;&#x6709;HTTP&#x8FDE;&#x63A5;&#x90FD;&#x88AB;&#x6784;&#x9020;&#x6210;&#x4E00;&#x5957;&#x8BF7;&#x6C42;&#x548C;&#x5E94;&#x7B54;&#x3002;<br>HTTP&#x4F7F;&#x7528;&#x5185;&#x5BB9;&#x7C7B;&#x578B;&#xFF0C;&#x662F;&#x6307;Web&#x670D;&#x52A1;&#x5668;&#x5411;Web&#x6D4F;&#x89C8;&#x5668;&#x8FD4;&#x56DE;&#x7684;&#x6587;&#x4EF6;&#x90FD;&#x6709;&#x4E0E;&#x4E4B;&#x76F8;&#x5173;&#x7684;&#x7C7B;&#x578B;&#x3002;&#x6240;&#x6709;&#x8FD9;&#x4E9B;&#x7C7B;&#x578B;&#x5728;MIME&#x3000;Internet&#x90AE;&#x4EF6;&#x534F;&#x8BAE;&#x4E0A;&#x6A21;&#x578B;&#x5316;&#xFF0C;&#x5373;Web&#x670D;&#x52A1;&#x5668;&#x544A;&#x8BC9;Web&#x6D4F;&#x89C8;&#x5668;&#x8BE5;&#x6587;&#x4EF6;&#x6240;&#x5177;&#x6709;&#x7684;&#x79CD;&#x7C7B;&#xFF0C;&#x662F;HTML&#x6587;&#x6863;&#x3001;GIF&#x683C;&#x5F0F;&#x56FE;&#x50CF;&#x3001;&#x58F0;&#x97F3;&#x6587;&#x4EF6;&#x8FD8;&#x662F;&#x72EC;&#x7ACB;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;&#x5927;&#x591A;&#x6570;Web&#x6D4F;&#x89C8;&#x5668;&#x90FD;&#x62E5;&#x6709;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x53EF;&#x914D;&#x7F6E;&#x7684;&#x8F85;&#x52A9;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x5B83;&#x4EEC;&#x544A;&#x8BC9;&#x6D4F;&#x89C8;&#x5668;&#x5E94;&#x8BE5;&#x5982;&#x4F55;&#x5904;&#x7406;Web&#x670D;&#x52A1;&#x5668;&#x53D1;&#x9001;&#x8FC7;&#x6765;&#x7684;&#x5404;&#x79CD;&#x5185;&#x5BB9;&#x7C7B;&#x578B;&#x3002;<br>HTTP&#x901A;&#x4FE1;&#x673A;&#x5236;&#x662F;&#x5728;&#x4E00;&#x6B21;&#x5B8C;&#x6574;&#x7684;HTTP&#x901A;&#x4FE1;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;Web&#x6D4F;&#x89C8;&#x5668;&#x4E0E;Web&#x670D;&#x52A1;&#x5668;&#x4E4B;&#x95F4;&#x5C06;&#x5B8C;&#x6210;&#x4E0B;&#x5217;7&#x4E2A;&#x6B65;&#x9AA4;&#xFF1A;<br>&#xFF08;1&#xFF09;    &#x5EFA;&#x7ACB;TCP&#x8FDE;&#x63A5;<br>&#x5728;HTTP&#x5DE5;&#x4F5C;&#x5F00;&#x59CB;&#x4E4B;&#x524D;&#xFF0C;Web&#x6D4F;&#x89C8;&#x5668;&#x9996;&#x5148;&#x8981;&#x901A;&#x8FC7;&#x7F51;&#x7EDC;&#x4E0E;Web&#x670D;&#x52A1;&#x5668;&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;&#xFF0C;&#x8BE5;&#x8FDE;&#x63A5;&#x662F;&#x901A;&#x8FC7;TCP&#x6765;&#x5B8C;&#x6210;&#x7684;&#xFF0C;&#x8BE5;&#x534F;&#x8BAE;&#x4E0E;IP&#x534F;&#x8BAE;&#x5171;&#x540C;&#x6784;&#x5EFA;Internet&#xFF0C;&#x5373;&#x8457;&#x540D;&#x7684;TCP/IP&#x534F;&#x8BAE;&#x65CF;&#xFF0C;&#x56E0;&#x6B64;Internet&#x53C8;&#x88AB;&#x79F0;&#x4F5C;&#x662F;TCP/IP&#x7F51;&#x7EDC;&#x3002;HTTP&#x662F;&#x6BD4;TCP&#x66F4;&#x9AD8;&#x5C42;&#x6B21;&#x7684;&#x5E94;&#x7528;&#x5C42;&#x534F;&#x8BAE;&#xFF0C;&#x6839;&#x636E;&#x89C4;&#x5219;&#xFF0C;&#x53EA;&#x6709;&#x4F4E;&#x5C42;&#x534F;&#x8BAE;&#x5EFA;&#x7ACB;&#x4E4B;&#x540E;&#x624D;&#x80FD;&#xFF0C;&#x624D;&#x80FD;&#x8FDB;&#x884C;&#x66F4;&#x5C42;&#x534F;&#x8BAE;&#x7684;&#x8FDE;&#x63A5;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x9996;&#x5148;&#x8981;&#x5EFA;&#x7ACB;TCP&#x8FDE;&#x63A5;&#xFF0C;&#x4E00;&#x822C;TCP&#x8FDE;&#x63A5;&#x7684;&#x7AEF;&#x53E3;&#x53F7;&#x662F;80<br>&#xFF08;2&#xFF09;    Web&#x6D4F;&#x89C8;&#x5668;&#x5411;Web&#x670D;&#x52A1;&#x5668;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x547D;&#x4EE4;<br>&#x4E00;&#x65E6;&#x5EFA;&#x7ACB;&#x4E86;TCP&#x8FDE;&#x63A5;&#xFF0C;Web&#x6D4F;&#x89C8;&#x5668;&#x5C31;&#x4F1A;&#x5411;Web&#x670D;&#x52A1;&#x5668;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x547D;&#x4EE4;<br>&#x4F8B;&#x5982;&#xFF1A;GET/sample/hello.jsp HTTP/1.1<br>&#xFF08;3&#xFF09;    Web&#x6D4F;&#x89C8;&#x5668;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x5934;&#x4FE1;&#x606F;<br>&#x6D4F;&#x89C8;&#x5668;&#x53D1;&#x9001;&#x5176;&#x8BF7;&#x6C42;&#x547D;&#x4EE4;&#x4E4B;&#x540E;&#xFF0C;&#x8FD8;&#x8981;&#x4EE5;&#x5934;&#x4FE1;&#x606F;&#x7684;&#x5F62;&#x5F0F;&#x5411;Web&#x670D;&#x52A1;&#x5668;&#x53D1;&#x9001;&#x4E00;&#x4E9B;&#x522B;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x4E4B;&#x540E;&#x6D4F;&#x89C8;&#x5668;&#x53D1;&#x9001;&#x4E86;&#x4E00;&#x7A7A;&#x767D;&#x884C;&#x6765;&#x901A;&#x77E5;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5B83;&#x5DF2;&#x7ECF;&#x7ED3;&#x675F;&#x4E86;&#x8BE5;&#x5934;&#x4FE1;&#x606F;&#x7684;&#x53D1;&#x9001;&#x3002;<br>&#xFF08;4&#xFF09;    Web&#x670D;&#x52A1;&#x5668;&#x5E94;&#x7B54;<br>&#x5BA2;&#x6237;&#x673A;&#x5411;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x51FA;&#x8BF7;&#x6C42;&#x540E;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x4F1A;&#x5BA2;&#x6237;&#x673A;&#x56DE;&#x9001;&#x5E94;&#x7B54;&#xFF0C;<br>HTTP/1.1 200 OK<br>&#x5E94;&#x7B54;&#x7684;&#x7B2C;&#x4E00;&#x90E8;&#x5206;&#x662F;&#x534F;&#x8BAE;&#x7684;&#x7248;&#x672C;&#x53F7;&#x548C;&#x5E94;&#x7B54;&#x72B6;&#x6001;&#x7801;<br>&#xFF08;5&#xFF09;    Web&#x670D;&#x52A1;&#x5668;&#x53D1;&#x9001;&#x5E94;&#x7B54;&#x5934;&#x4FE1;&#x606F;<br>&#x6B63;&#x5982;&#x5BA2;&#x6237;&#x7AEF;&#x4F1A;&#x968F;&#x540C;&#x8BF7;&#x6C42;&#x53D1;&#x9001;&#x5173;&#x4E8E;&#x81EA;&#x8EAB;&#x7684;&#x4FE1;&#x606F;&#x4E00;&#x6837;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x4E5F;&#x4F1A;&#x968F;&#x540C;&#x5E94;&#x7B54;&#x5411;&#x7528;&#x6237;&#x53D1;&#x9001;&#x5173;&#x4E8E;&#x5B83;&#x81EA;&#x5DF1;&#x7684;&#x6570;&#x636E;&#x53CA;&#x88AB;&#x8BF7;&#x6C42;&#x7684;&#x6587;&#x6863;&#x3002;<br>&#xFF08;6&#xFF09;    Web&#x670D;&#x52A1;&#x5668;&#x5411;&#x6D4F;&#x89C8;&#x5668;&#x53D1;&#x9001;&#x6570;&#x636E;<br>Web&#x670D;&#x52A1;&#x5668;&#x5411;&#x6D4F;&#x89C8;&#x5668;&#x53D1;&#x9001;&#x5934;&#x4FE1;&#x606F;&#x540E;&#xFF0C;&#x5B83;&#x4F1A;&#x53D1;&#x9001;&#x4E00;&#x4E2A;&#x7A7A;&#x767D;&#x884C;&#x6765;&#x8868;&#x793A;&#x5934;&#x4FE1;&#x606F;&#x7684;&#x53D1;&#x9001;&#x5230;&#x6B64;&#x4E3A;&#x7ED3;&#x675F;&#xFF0C;&#x63A5;&#x7740;&#xFF0C;&#x5B83;&#x5C31;&#x4EE5;Content-Type&#x5E94;&#x7B54;&#x5934;&#x4FE1;&#x606F;&#x6240;&#x63CF;&#x8FF0;&#x7684;&#x683C;&#x5F0F;&#x53D1;&#x9001;&#x7528;&#x6237;&#x6240;&#x8BF7;&#x6C42;&#x7684;&#x5B9E;&#x9645;&#x6570;&#x636E;<br>&#xFF08;7&#xFF09;    Web&#x670D;&#x52A1;&#x5668;&#x5173;&#x95ED;TCP&#x8FDE;&#x63A5;<br>&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4E00;&#x65E6;Web&#x670D;&#x52A1;&#x5668;&#x5411;&#x6D4F;&#x89C8;&#x5668;&#x53D1;&#x9001;&#x4E86;&#x8BF7;&#x6C42;&#x6570;&#x636E;&#xFF0C;&#x5B83;&#x5C31;&#x8981;&#x5173;&#x95ED;TCP&#x8FDE;&#x63A5;&#xFF0C;&#x7136;&#x540E;&#x5982;&#x679C;&#x6D4F;&#x89C8;&#x5668;&#x6216;&#x8005;&#x670D;&#x52A1;&#x5668;&#x5728;&#x5176;&#x5934;&#x4FE1;&#x606F;&#x52A0;&#x5165;&#x4E86;&#x8FD9;&#x884C;&#x4EE3;&#x7801;<br>Connection:keep-alive<br>TCP&#x8FDE;&#x63A5;&#x5728;&#x53D1;&#x9001;&#x540E;&#x5C06;&#x4ECD;&#x7136;&#x4FDD;&#x6301;&#x6253;&#x5F00;&#x72B6;&#x6001;&#xFF0C;&#x4E8E;&#x662F;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x53EF;&#x4EE5;&#x7EE7;&#x7EED;&#x901A;&#x8FC7;&#x76F8;&#x540C;&#x7684;&#x8FDE;&#x63A5;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x3002;&#x4FDD;&#x6301;&#x8FDE;&#x63A5;&#x8282;&#x7701;&#x4E86;&#x4E3A;&#x6BCF;&#x4E2A;&#x8BF7;&#x6C42;&#x5EFA;&#x7ACB;&#x65B0;&#x8FDE;&#x63A5;&#x6240;&#x9700;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x8FD8;&#x8282;&#x7EA6;&#x4E86;&#x7F51;&#x7EDC;&#x5E26;&#x5BBD;&#x3002;<br>&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;<br>&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;<br>Q&#xFF1A;&#x4EC0;&#x4E48;&#x662F;GET&#x548C;POST&#x8BF7;&#x6C42;&#xFF1F;<br>A&#xFF1A;GET&#x8BF7;&#x6C42;&#x662F;&#x5BA2;&#x6237;&#x673A;&#x5411;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x8D77;&#x7684;&#xFF0C;&#x4F5C;&#x7528;&#x662F;&#x5411;&#x670D;&#x52A1;&#x5668;&#x8BF7;&#x6C42;&#x8D44;&#x6E90;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x5411;&#x5BA2;&#x6237;&#x673A;&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x3002;<br>POST&#x8BF7;&#x6C42;&#x662F;&#x5BA2;&#x6237;&#x673A;&#x5411;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x8D77;&#x7684;&#xFF0C;&#x4F5C;&#x7528;&#x662F;&#x5411;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x9001;&#x8868;&#x5355;&#x7B49;&#x6570;&#x636E;&#xFF0C;&#x7ED9;&#x670D;&#x52A1;&#x5668;&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x5904;&#x7406;&#x5B8C;&#x4E4B;&#x540E;&#x4E5F;&#x4F1A;&#x8FD4;&#x56DE;&#x76F8;&#x5E94;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x4EE5;&#x8BF4;&#x660E;&#x5904;&#x7406;&#x7ED3;&#x679C;<br>&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;<br>&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;<br>Q&#xFF1A;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x53C8;&#x662F;&#x5982;&#x4F55;&#x5904;&#x7406;&#x6D4F;&#x89C8;&#x5668;&#x7684;request&#xFF1F;&#x8FD4;&#x56DE;&#x7684;&#x4E1C;&#x897F;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;&#x8FD4;&#x56DE;&#x5230;&#x54EA;&#x91CC;&#x53BB;&#xFF1F;<br>GET&#x65B9;&#x6CD5;&#xFF1A;<br>A&#xFF1A;# &#x6700;&#x57FA;&#x672C;&#x7684;url&#x5904;&#x7406;<br>from aiohttp import web<br>import asyncio</p>
 <p>@asyncio.coroutine<br>def handler(request):<br>    return web.Response(body=b&#x2019;hello&#x2019;)</p>
 <p>app = web.Application()<br>app.router.add_route(&#x2018;GET&#x2019;, &#x2018;/&#x2018;, handler)<br>web.run_app(app)<br>&#x4EE5;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x4E3A;&#x4F8B;&#xFF0C;&#x5728;&#x5C06;handler&#x6DFB;&#x52A0;&#x5230;app&#x4E4B;&#x540E;&#xFF0C;request&#x7684;&#x5904;&#x7406;&#x5C31;&#x4EA4;&#x7ED9;handler&#xFF0C;&#x5176;&#x8FD4;&#x56DE;&#x503C;&#x4F4D;Response&#x5BF9;&#x8C61;&#xFF0C;&#x662F;&#x6D4F;&#x89C8;&#x5668;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7528;&#x7684;&#xFF0C;&#x7ECF;&#x7531;http&#x534F;&#x8BAE;&#x540E;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED9;&#x6D4F;&#x89C8;&#x5668;<br>POST&#x65B9;&#x6CD5;&#xFF1A;</p>
 <p>&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;<br>&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;<br>Q&#xFF1A;middleware&#x5728;&#x5F00;&#x53D1;&#x4E2D;&#x8D77;&#x5230;&#x4EC0;&#x4E48;&#x4F5C;&#x7528;&#xFF1F;<br>A&#xFF1A;<br>&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;<br>&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;&#xFF0D;</p>
 
-	
-	
-	
-	
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
 </div>
-				
-				
 
-                <!-- Post Comments -->
+    <a data-url="http://yoursite.com/2016/08/26/Python-web-开发（Q-A）/" data-id="ciysdx2xx0026ibiuqxbd72hc" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://yoursite.com/2016/08/26/Python-web-开发（Q-A）/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/08/26/Python-web-开发（Q-A）/">评论</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/08/31/机器学习读书笔记 （周志华）Bayes/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
                 
-                    
-
-
+                    机器学习读书笔记 （周志华）Bayes
                 
             </div>
-
-            <!-- Post Prev & Next Nav -->
-            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
-    
-    <!-- Prev Nav -->
-    
-        <a href="/2016/08/31/机器学习读书笔记 （周志华）Bayes/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
         </a>
     
-
-    <!-- Section Spacer -->
-    <div class="section-spacer"></div>
-
-    <!-- Next Nav -->
     
-        <a href="/2016/08/26/Python web 开发（3）－web框架/" id="post_nav-older" class="next-content">
-            旧篇
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_forward</i>
-            </button>
+        <a href="/2016/08/26/Python web 开发（3）－web框架/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">Python web 开发（3）－web框架</div>
         </a>
     
 </nav>
-        </div>
+
+
+    
+</article>
+
+
+    
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 
-				
-				
-					<!-- Overlay For Active Sidebar -->
-<div class="sidebar-overlay "></div>
+    
+    </section>
 
-<!-- Material sidebar -->
-<aside id="sidebar" class="sidebar sidebar-colored  sidebar-fixed-left" role="navigation">
-	<div id="sidebar-main">
-	    <!-- Sidebar Header -->
-		<div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
-    <!-- Top bar -->
-    <div class="top-bar"></div>
-
-    <!-- Sidebar toggle button -->
-    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
-    <i class="material-icons">clear_all</i>
-    <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button>
-
-    <!-- Sidebar Avatar -->
-    <div class="sidebar-image">
-        <img src="/img/avatar.png" alt="macwu's avatar">
-    </div>
-
-    <!-- Sidebar Email -->
-    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
-        youremail@email.com
-        <b class="caret"></b>
-    </a>
-</div>
-
-		<!-- Sidebar Navigation  -->
-		<ul class="nav sidebar-nav">
-    <!-- User dropdown  -->
-    <li class="dropdown">
-        <ul id="settings-dropdown" class="dropdown-menu">
-			
-                <li>
-                    <a href="#" target="_blank" title="Email Me">
-						<i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
-                        Email Me
-                    </a>
-                </li>
+</section>
             
-        </ul>
-    </li>
-
-    <!-- Homepage -->
-    <li id="sidebar-first-li">
-        <a href="/" target="_self">
-            <i class="material-icons sidebar-material-icons">home</i>
-             主页
-        </a>
-    </li>
-
-    <!-- I'm Feeling Lucky -->
-<!--
-    <li class="dropdown">
-        <a href="" target="_self">
-            <i class="material-icons sidebar-material-icons">explore</i>
-             sidebar.imlucky
-        </a>
-    </li>
--->
-
-	
-    <!-- Archives  -->
-    <li class="dropdown">
-        <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-            <i class="material-icons sidebar-material-icons">inbox</i>
-             归档
-            <b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu">
-            <li>
-            <a class="sidebar_archives-link" href="/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">十月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">八月 2016<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/02/">二月 2016<span class="sidebar_archives-count">4</span></a>
-        </ul>
-    </li>
-
-    <!-- Divider -->
-    <li class="divider"></li>
-
-
-    <!-- Pages  -->
-	
-
-    <!-- Article Numebr  -->
-    <li>
-        <a href="/archives">
-             文章总数
-             <span class="sidebar-badge">20</span>
-        </a>
-    </li>
-</ul>
-
-		<!-- Sidebar Divider -->
-		<div class="sidebar-divider"></div>
-
-		<!-- Sidebar Footer -->
-		<!-- 
-I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
-If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
-It will not impact the appearance and can give developers a lot of support :)
-
-很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
-如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
-它不会影响美观并可以给开发者很大的支持。 :) 
--->
-
-<!-- Theme Material -->
-<a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
-	<div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
-		主题 - Material
-		<span class="sidebar-badge badge-circle">i</span>
-	</div>
-</a>
-
-<!-- Help & Support -->
-<!--
-<a href="mailto:hiviosey@gmail.com" class="sidebar-footer-text-a">
-    <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
-		sidebar.help
-		<span class="mdl-button__ripple-container">
-			<span class="mdl-ripple"></span>
-		</span>
-	</div>
-</a>
--->
-
-<!-- Feedback -->
-<!--
-<a href="https://github.com/viosey/hexo-theme-material/issues" target="_blank" class="sidebar-footer-text-a">
-    <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
-         sidebar.feedback
-                    <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
-</a>
--->
-
-<!-- Abount Theme -->
-<!--
-<a href="https://blog.viosey.com/index.php/Material.html" target="_blank" class="sidebar-footer-text-a">
-    <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
-         sidebar.about_theme
-        <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
-</a>-->
-
-	</div>
-    
-    <!-- Sidebar Sponsor -->
-    
-
-
-</aside>
-
-				
-				
-				
-					<!-- Footer Top Button -->
-					<div class="toTop-wrap">
-    <a href="#top" class="toTop">
-        <i class="material-icons footer_top-i">expand_less</i>
-    </a>
-</div>
-				
-				
-				<!--Footer-->
-<footer class="mdl-mini-footer" id="bottom">
-	
-	
-		<!-- Paradox Footer Left Section -->
-		<div class="mdl-mini-footer--left-section sns-list">
-    <!-- Twitter -->
-    
-    <a href="https://twitter.com/twitter" target="view_window"><button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-twitter.png);">
-        <span class="visuallyhidden">Twitter</span>
-    </button></a>
-    
-
-    <!-- Facebook -->
-    
-    <a href="https://www.facebook.com/facebook" target="view_window"><button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-facebook.png);">
-        <span class="visuallyhidden">Facebook</span>
-    </button></a>
-    
-
-    <!-- Google + -->
-    
-    <a href="https://www.google.com/" target="view_window"><button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-gplus.png);">
-        <span class="visuallyhidden">Google Plus</span>
-    </button></a>
-    
-
-    <!-- Weibo -->
-    
-    
-
-    <!-- Instagram -->
-    
-    
-
-    <!-- Tumblr -->
-    
-    
-
-    <!-- Github -->
-    
-    
-
-    <!-- LinkedIn -->
-    
-    
-</div>
-
-
-		<!--Copyright-->
-		<div id="copyright">Copyright&nbsp;©&nbsp;<script type="text/javascript">var fd = new Date();document.write(fd.getFullYear());</script>&nbsp;沙上有印</div>
-
-		<!-- Paradox Footer Right Section -->
-
-		<!-- 
-		I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright.
-		It will not impact the appearance and can give developers a lot of support :)
-
-		很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
-		它不会影响美观并可以给开发者很大的支持。 :) 
-		-->
-
-		<div class="mdl-mini-footer--right-section">
-			<div>
-				<div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
-				<div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
-			</div>
-		</div>
-	
-    
-</footer>
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">最新文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
                 
-				<!-- Import File -->
-<script src="/js/highlight.min.js" type="text/javascript"></script>
-<script src="/js/js.min.js" type="text/javascript"></script>
-<script src="/js/nprogress.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-    NProgress.configure({
-        showSpinner: true
-    });
-    NProgress.start();
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/12/25/算法导论 chp2（排序算法）/" class="thumbnail">
     
-    $('#nprogress .bar').css({
-        'background': '#FF4081'
-    });
-    $('#nprogress .peg').css({
-        'box-shadow': '0 0 10px #FF4081, 0 0 15px #FF4081'
-    });
-    $('#nprogress .spinner-icon').css({
-        'border-top-color': '#FF4081',
-        'border-left-color': '#FF4081'
-    });
     
-    setTimeout(function() {
-        NProgress.done();
-        $('.fade').removeClass('out');
-    }, 800);
-</script>
+        <span style="background-image:url(http://ww3.sinaimg.cn/mw690/b07774eejw1fb3dxc6ea8j204a064aa0.jpg)" alt="算法导论 chp2（排序算法）" class="thumbnail-image"></span>
+    
+</a>
 
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/算法/">算法</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/算法/算法入门/">算法入门</a></p>
+                            <p class="item-title"><a href="/2016/12/25/算法导论 chp2（排序算法）/" class="title">算法导论 chp2（排序算法）</a></p>
+                            <p class="item-date"><time datetime="2016-12-25T13:55:47.000Z" itemprop="datePublished">2016-12-25</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/10/30/Web学习（四）JSP中的内置对象/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
 
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2016/10/30/Web学习（四）JSP中的内置对象/" class="title">Web学习（四）JSP中的内置对象</a></p>
+                            <p class="item-date"><time datetime="2016-10-30T03:09:56.000Z" itemprop="datePublished">2016-10-30</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/10/30/Web学习（三）JSP基本语法/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://udemy-images.udemy.com/course/750x422/23742_3580_8.jpg)" alt="Web学习（三）JSP基本语法" class="thumbnail-image"></span>
+    
+</a>
 
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/java/">java</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/java/学习/">学习</a></p>
+                            <p class="item-title"><a href="/2016/10/30/Web学习（三）JSP基本语法/" class="title">Web学习（三）JSP基本语法</a></p>
+                            <p class="item-date"><time datetime="2016-10-30T02:56:37.000Z" itemprop="datePublished">2016-10-30</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/10/30/Web学习（二）javascript知识积累/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://udemy-images.udemy.com/course/750x422/23742_3580_8.jpg)" alt="Web学习（二）javascript知识积累" class="thumbnail-image"></span>
+    
+</a>
 
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/java/">java</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/java/学习/">学习</a></p>
+                            <p class="item-title"><a href="/2016/10/30/Web学习（二）javascript知识积累/" class="title">Web学习（二）javascript知识积累</a></p>
+                            <p class="item-date"><time datetime="2016-10-30T02:51:40.000Z" itemprop="datePublished">2016-10-30</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/10/30/Web学习（一）环境配置/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://udemy-images.udemy.com/course/750x422/23742_3580_8.jpg)" alt="Web学习（一）环境配置" class="thumbnail-image"></span>
+    
+</a>
 
-
-
-
-
-
-
-<!-- Swiftye -->
-
-
-<!-- Local Search-->
-
-
-<!-- Window Load-->
-<script>
-    $(window).load(function() {
-        // Post_Toc parent position fixed
-        $(".post-toc-wrap").parent(".mdl-menu__container").css("position", "fixed");
-    });
-</script>
-
-<!-- MathJax Load-->
-
-            </main>
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/java/">java</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/java/学习/">学习</a></p>
+                            <p class="item-title"><a href="/2016/10/30/Web学习（一）环境配置/" class="title">Web学习（一）环境配置</a></p>
+                            <p class="item-date"><time datetime="2016-10-30T02:47:03.000Z" itemprop="datePublished">2016-10-30</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
         </div>
-		
-    </body>
-		
-	
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">分类</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/java/学习/">学习</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/java/学习/Spring-Boot/">Spring-Boot</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/学习/java从入门到精通/">java从入门到精通</a><span class="category-list-count">4</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/python/项目记录/">项目记录</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/python/项目记录/python-web/">python web</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/项目记录/爬虫/">爬虫</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/机器学习/">机器学习</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/机器学习/吴恩达课程/">吴恩达课程</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/机器学习/周志华/">周志华</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/算法/算法入门/">算法入门</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/">读书笔记</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/集体智慧编程/">集体智慧编程</a><span class="category-list-count">3</span></li></ul></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">4</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">标签</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java-web/">java-web</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python-web/">python web</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习笔记/">学习笔记</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据挖掘十大算法/">数据挖掘十大算法</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/机器学习/">机器学习</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/爬虫/">爬虫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法/">算法</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络课程/">网络课程</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/读书笔记/">读书笔记</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/项目/">项目</a><span class="tag-list-count">5</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/java/" style="font-size: 16px;">java</a> <a href="/tags/java-web/" style="font-size: 16px;">java-web</a> <a href="/tags/python/" style="font-size: 16px;">python</a> <a href="/tags/python-web/" style="font-size: 14px;">python web</a> <a href="/tags/学习笔记/" style="font-size: 12px;">学习笔记</a> <a href="/tags/数据挖掘十大算法/" style="font-size: 12px;">数据挖掘十大算法</a> <a href="/tags/机器学习/" style="font-size: 20px;">机器学习</a> <a href="/tags/爬虫/" style="font-size: 10px;">爬虫</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/网络课程/" style="font-size: 12px;">网络课程</a> <a href="/tags/读书笔记/" style="font-size: 18px;">读书笔记</a> <a href="/tags/项目/" style="font-size: 16px;">项目</a>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">链接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2017 TonyWu<br>
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_config = function () {
+        
+            this.page.url = 'http://yoursite.com/2016/08/26/Python-web-开发（Q-A）/';
+        
+        this.page.identifier = 'Python-web-开发（Q-A）';
+    };
+    (function() { 
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'hexo-theme-icarus' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+
+
+    
+        <script src="/vendor/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js" type="text/javascript"></script>
+
+    </div>
+</body>
 </html>
