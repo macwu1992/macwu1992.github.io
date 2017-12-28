@@ -11,7 +11,7 @@
 
 <div id="qrcode" style="width:100px; height:100px; margin-top:15px;"></div><br />
 <input id="text" type="text" value="http://www.runoob.com" style="width:80%" /><br />
-<button id="btn">点我换二维码</button>
+<button id="btn" onClick="makeCode()">点我换二维码</button>
 
 <script type="text/javascript">
 var qrcode = new QRCode(document.getElementById("qrcode"), {
@@ -31,9 +31,7 @@ function makeCode () {
 	qrcode.makeCode(elText.value);
 }
 
-btn.onclick(){
-	makeCode();
-}
+makeCode();
 
 $("#text").
 	on("blur", function () {
